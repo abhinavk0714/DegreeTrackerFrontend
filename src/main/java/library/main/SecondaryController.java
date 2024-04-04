@@ -1,4 +1,4 @@
-package salt.frontend;
+package library.main;
 
 import java.io.IOException;
 import javafx.fxml.FXML;

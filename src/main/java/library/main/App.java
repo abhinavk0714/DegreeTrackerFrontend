@@ -1,4 +1,4 @@
-package salt.frontend;
+package library.main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

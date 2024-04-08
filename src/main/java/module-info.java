@@ -3,6 +3,8 @@ module salt.frontend {
     requires javafx.fxml;
     requires json.simple;
 
-    opens library.main to javafx.fxml;
-    exports library.main;
+    opens library to javafx.fxml;
+    exports library;
+    opens controllers to javafx.fxml;
+    exports controllers to javafx.fxml;
 }

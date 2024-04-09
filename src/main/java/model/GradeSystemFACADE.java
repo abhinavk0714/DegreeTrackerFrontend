@@ -25,6 +25,10 @@ public class GradeSystemFACADE {
         return facade;
     }
 
+    public User getUser()
+    {
+        return this.currentUser;
+    }
 
     public void setUserList(UserList userList) {
         this.userList = userList;

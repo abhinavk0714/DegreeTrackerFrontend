@@ -4,10 +4,10 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import library.App;
 
-public class PrimaryController {
+public class StudentController {
 
     @FXML
     private void switchToSecondary() throws IOException {
-        App.setRoot("secondary");
+        App.setRoot("Student");
     }
 }

@@ -14,6 +14,10 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
      <stylesheets>
+<<<<<<< HEAD
       <URL value="styles.css" />
+=======
+      <URL value="@styles.css" />
+>>>>>>> f8d43e047e5316711fe43701dd16bc82c00b5d3d
    </stylesheets>
 </VBox>

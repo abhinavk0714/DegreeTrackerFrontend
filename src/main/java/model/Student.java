@@ -107,6 +107,10 @@ public class Student extends User{
     {
         return this.remainingCreditHours;
     }
+
+    public double getMajorProgress(){
+        return this.majorProgress;
+    }
     
     public Flag getFlag()
     {

@@ -2,21 +2,22 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="BOTTOM_RIGHT" prefHeight="536.0" prefWidth="683.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<VBox alignment="BOTTOM_RIGHT" prefHeight="536.0" prefWidth="683.0" spacing="20.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
-      <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="157.0" promptText="Enter Username" />
-      <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="157.0" promptText="Enter Password" />
-      <Button alignment="TOP_CENTER" contentDisplay="TOP" mnemonicParsing="false" text="Student Login" textAlignment="CENTER" />
-      <Button mnemonicParsing="false" prefWidth="102.0" text="Advisor Login" />
-      <Button mnemonicParsing="false" text="Create an Account" />
+      <TextField fx:id="txt_username" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Username" />
+      <PasswordField fx:id="txt_password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Password" />
+      <Button fx:id="studentLoginButton" onAction="#switchToStudentView" prefWidth="102.0" text="Student Login" />
+      <Button fx:id="advisorLoginButton" onAction="#switchToAdvisorView" text="Advisor Login" />
+      <Button fx:id="createAccountButton" onAction="#switchToCreateAnAccountView" text="Create an Account" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
-    <stylesheets>
-      <URL value="styles.css" />
-   </stylesheets>
+    <!-- <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets> -->
 </VBox>

@@ -7,7 +7,10 @@
 
 <VBox alignment="BOTTOM_RIGHT" prefHeight="536.0" prefWidth="683.0" spacing="20.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
-      <TextField prefHeight="26.0" prefWidth="158.0" promptText="Enter Username" />
+      <TextField fx:id="txt_firstname" layoutX="515.0" layoutY="454.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter First Name" />
+      <TextField fx:id="txt_lastname" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Last Name" />
+      <TextField fx:id="txt_username" layoutX="515.0" layoutY="454.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Username" />
+      <TextField fx:id="txt_password" layoutX="515.0" layoutY="454.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Password" />
       <Button fx:id="SignUp" onAction="#switchToLoginScreen" prefWidth="102.0" text="Register" />
    </children>
    <padding>

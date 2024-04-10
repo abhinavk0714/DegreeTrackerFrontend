@@ -1,5 +1,3 @@
-package model;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
@@ -8,10 +6,14 @@ public class MajorList {
     private static MajorList majorList;
     private ArrayList<Major> availableMajors;
     private HashMap<UUID, Major> majorMap;
+    private static HashMap<UUID, Course> courseMap;
+
 
     private MajorList() {
-        this.availableMajors = DataLoader.loadMajors(null);
+        courseMap = DataLoader.loadCourses();
+        this.availableMajors = DataLoader.loadMajors(courseMap);
         this.majorMap = new HashMap<>();
+
     }
 
     public static MajorList getInstance() {

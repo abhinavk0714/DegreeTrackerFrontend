@@ -82,14 +82,14 @@ public class UserList {
         listOfStudents.add(student);
     }
 
-    /*public void saveStudents() {
-        DataWriter.saveStudents(listOfStudents);
+    public void saveStudents() {
+        DataWriter.saveStudents();
     }
 
     public void saveAdvisors() {
-        DataWriter.saveAdvisors(listOfAdvisors);  // waiting on datawriter method for this
+        DataWriter.saveAdvisors();  // waiting on datawriter method for this
     }
-    */
+    
 
     public ArrayList<Student> getStudents(){
         return listOfStudents;

@@ -16,7 +16,7 @@ public class GradeSystemFACADE {
         this.courseList = courseList;
         this.majorList = majorList;
         this.currentUser = null;
-        //this.currentUser = new User("BWest", "12345", "Brax", "West");
+        this.currentUser = new User("BWest", "12345", "Brax", "West");
     }
 
     public static GradeSystemFACADE getFacadeInstance(UserList userList, CourseList courseList, MajorList majorList) {
@@ -164,5 +164,17 @@ public class GradeSystemFACADE {
             return true;
         }
 
+    }
+
+    //added a create new student method
+    public void newStudentUser(String fn,String ln, String userName, String password)
+    {
+        userList.addStudent(new Student(UUID.randomUUID(), userName, password, userName, password));
+    }
+
+    // added a create new advisor method
+    public void newAdvisorUser(String fn,String ln, String userName, String password)
+    {
+        userList.addAdvisor(new Advisor(UUID.randomUUID(), fn, ln, userName, password, null));
     }
 }

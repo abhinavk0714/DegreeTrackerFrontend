@@ -50,10 +50,10 @@ public class SignUpController {
         String lastName = txt_lastname.getText();
         String username = txt_username.getText();
         String password = txt_password.getText();
-
-        
         
     }
+
+    
     @FXML
     private void switchToSignIn(ActionEvent event){
         try {

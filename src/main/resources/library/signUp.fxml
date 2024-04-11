@@ -11,7 +11,8 @@
       <TextField fx:id="txt_lastname" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Last Name" />
       <TextField fx:id="txt_username" layoutX="515.0" layoutY="454.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Username" />
       <TextField fx:id="txt_password" layoutX="515.0" layoutY="454.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Password" />
-      <Button fx:id="SignUp" onAction="#switchToLoginScreen" prefWidth="102.0" text="Register" />
+      <Button fx:id="studentButton" onAction="#switchToLoginScreen" prefHeight="26.0" prefWidth="124.0" text="Student Register" />
+      <Button fx:id="advisorButton" layoutX="549.0" layoutY="500.0" onAction="#switchToLoginScreen" prefHeight="26.0" prefWidth="124.0" text="Advisor Resigter" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

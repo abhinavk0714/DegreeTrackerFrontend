@@ -16,7 +16,6 @@ public class GradeSystemFACADE {
         this.courseList = courseList;
         this.majorList = majorList;
         this.currentUser = null;
-        this.currentUser = new User("BWest", "12345", "Brax", "West");
     }
 
     public static GradeSystemFACADE getFacadeInstance(UserList userList, CourseList courseList, MajorList majorList) {

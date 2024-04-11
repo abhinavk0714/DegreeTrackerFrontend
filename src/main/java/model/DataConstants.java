@@ -84,8 +84,8 @@ public class DataConstants {
     /**
      * File paths
      */
-    protected static final String STUDENT_FILE_NAME = "json/Students.json";
-    protected static final String COURSE_FILE_NAME = "json/Course.json";
-    protected static final String MAJOR_FILE_NAME = "json/Majors.json";
-    protected static final String ADVISOR_FILE_NAME = "json/Advisor.json";
+    protected static final String STUDENT_FILE_NAME = "src/main/java/data/Students.json";
+    protected static final String COURSE_FILE_NAME = "src/main/java/data/Course.json";
+    protected static final String MAJOR_FILE_NAME = "src/main/java/data/Majors.json";
+    protected static final String ADVISOR_FILE_NAME = "src/main/java/data/Advisor.json";
 }

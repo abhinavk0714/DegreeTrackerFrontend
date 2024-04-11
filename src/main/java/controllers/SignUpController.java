@@ -15,7 +15,7 @@ public class SignUpController {
 
     private GradeSystemFACADE facade;
     private UserList userList;
-    private User currentUser;
+   // private User currentUser;
     private CourseList courseList;
     private MajorList majorList;
 
@@ -45,15 +45,27 @@ public class SignUpController {
     }
 
     @FXML
-    void register(ActionEvent event) {
+    void Studentregister(ActionEvent event) {
         String fristName = txt_firstname.getText();
         String lastName = txt_lastname.getText();
         String username = txt_username.getText();
         String password = txt_password.getText();
-        
+
+        facade.newStudentUser(fristName, lastName, username, password);
+        switchToSignIn(event);
     }
 
-    
+    @FXML 
+    void Advisorregister(ActionEvent event)
+    {
+        String fristName = txt_firstname.getText();
+        String lastName = txt_lastname.getText();
+        String username = txt_username.getText();
+        String password = txt_password.getText();
+        facade.newAdvisorUser(fristName, lastName, username, password);
+        switchToSignIn(event);
+    }
+
     @FXML
     private void switchToSignIn(ActionEvent event){
         try {

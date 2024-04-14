@@ -52,7 +52,7 @@ public class SignUpController {
         String password = txt_password.getText();
 
         facade.newStudentUser(fristName, lastName, username, password);
-        switchToSignIn(event);
+        switchToLogInScreen(event);
     }
 
     @FXML 
@@ -63,11 +63,11 @@ public class SignUpController {
         String username = txt_username.getText();
         String password = txt_password.getText();
         facade.newAdvisorUser(fristName, lastName, username, password);
-        switchToSignIn(event);
+        switchToLogInScreen(event);
     }
 
     @FXML
-    private void switchToSignIn(ActionEvent event){
+    private void switchToLogInScreen(ActionEvent event){
         try {
             App.setRoot("login");
         } catch (IOException e) {

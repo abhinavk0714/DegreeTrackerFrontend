@@ -7,23 +7,23 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 import java.util.UUID;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.fxml.Initializable;
 import library.App;
-import model.Availablity;
+import model.CourseList;
+import model.GradeSystemFACADE;
+import model.MajorList;
+import model.Student;
+import model.UserList;
 
 public class CourseController implements Initializable{
-    private UUID id;
-    private String name;
-    private String department;
-    private String number;
-    private String description;
-    private long creditHours;
-    private ArrayList<Availablity> availablity;
-    private HashMap<UUID, String> prerequisite;
-    private ArrayList<UUID> corequisite;
+    private static GradeSystemFACADE facade;
+    private UserList userList;
+    private CourseList courseList;
+    private MajorList majorList;
 
     @FXML
     private TextField txt_department;
@@ -40,6 +40,16 @@ public class CourseController implements Initializable{
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        this.userList = UserList.getInstance();
+        this.courseList = CourseList.getInstance();
+        this.majorList = MajorList.getInstance();
+        this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
+    }
+    @FXML
+    void courseSearch(ActionEvent event) {
+        String department = txt_department.getText();
+        String number = txt_courseNumber.getText();
         
+       
     }
 }

@@ -6,12 +6,13 @@ import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import library.App;
 import model.*;
 
-public class SignUpController {
+public class SignUpController implements Initializable {
 
     private GradeSystemFACADE facade;
     private UserList userList;
@@ -37,7 +38,6 @@ public class SignUpController {
 
 
     public void initialize(URL url, ResourceBundle rb) {
-
         this.userList = UserList.getInstance();
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
@@ -45,29 +45,29 @@ public class SignUpController {
     }
 
     @FXML
-    void Studentregister(ActionEvent event) {
-        String fristName = txt_firstname.getText();
+    void studentRegister(ActionEvent event) {
+        String firstName = txt_firstname.getText();
         String lastName = txt_lastname.getText();
         String username = txt_username.getText();
         String password = txt_password.getText();
 
-        facade.newStudentUser(fristName, lastName, username, password);
-        switchToSignIn(event);
+        facade.newStudentUser(firstName, lastName, username, password);
+        switchToLogInScreen(event);
     }
 
     @FXML 
-    void Advisorregister(ActionEvent event)
+    void advisorRegister(ActionEvent event)
     {
-        String fristName = txt_firstname.getText();
+        String firstName = txt_firstname.getText();
         String lastName = txt_lastname.getText();
         String username = txt_username.getText();
         String password = txt_password.getText();
-        facade.newAdvisorUser(fristName, lastName, username, password);
-        switchToSignIn(event);
+        facade.newAdvisorUser(firstName, lastName, username, password);
+        switchToLogInScreen(event);
     }
 
     @FXML
-    private void switchToSignIn(ActionEvent event){
+    private void switchToLogInScreen(ActionEvent event){
         try {
             App.setRoot("login");
         } catch (IOException e) {

@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="601.0" prefWidth="938.0" scaleShape="false" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="601.0" prefWidth="938.0" scaleShape="false" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
       <TextField fx:id="txt_username" layoutX="655.0" layoutY="351.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Username" />
       <PasswordField fx:id="txt_password" layoutX="655.0" layoutY="393.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Password" />
-      <Button fx:id="studentLoginButton" contentDisplay="BOTTOM" layoutX="583.0" layoutY="470.0" onAction="#switchToStudentView" prefHeight="77.0" prefWidth="77.0" text="Student Login" textAlignment="CENTER" wrapText="true" />
-      <Button fx:id="advisorLoginButton" layoutX="695.0" layoutY="470.0" onAction="#switchToAdvisorView" prefHeight="77.0" prefWidth="77.0" text="Advisor Login" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="studentLoginButton" contentDisplay="BOTTOM" layoutX="583.0" layoutY="470.0" onAction="#studentLogin" prefHeight="77.0" prefWidth="77.0" text="Student Login" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="advisorLoginButton" layoutX="695.0" layoutY="470.0" onAction="#advisorLogin" prefHeight="77.0" prefWidth="77.0" text="Advisor Login" textAlignment="CENTER" wrapText="true" />
       <Button fx:id="createAccountButton" layoutX="805.0" layoutY="470.0" onAction="#switchToCreateAnAccountView" prefHeight="77.0" prefWidth="77.0" text="Create an Account" textAlignment="CENTER" wrapText="true" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#74000b" height="77.0" stroke="BLACK" strokeType="INSIDE" width="938.0" />
       <ImageView fitHeight="77.0" fitWidth="77.0" layoutX="861.0" pickOnBounds="true" preserveRatio="true">

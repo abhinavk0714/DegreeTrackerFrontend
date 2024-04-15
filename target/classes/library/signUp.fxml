@@ -29,9 +29,9 @@
          </image>
       </ImageView>
       <Text fontSmoothingType="LCD" layoutX="661.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register as New User" textAlignment="CENTER" />
-      <ImageView fitHeight="336.0" fitWidth="509.0" layoutX="14.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="520.0" fitWidth="496.0" layoutX="14.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../src/main/resources/images/usc-watertower.jpeg" />
+            <Image url="@../images/watertower.jpg" />
          </image>
       </ImageView>
    </children>

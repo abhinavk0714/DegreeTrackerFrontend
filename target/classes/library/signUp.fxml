@@ -22,7 +22,7 @@
             <Image url="@../images/usc-logo.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#74000b" height="26.0" layoutY="575.0" stroke="BLACK" strokeType="INSIDE" width="938.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#74000b" height="49.0" layoutY="552.0" stroke="BLACK" strokeType="INSIDE" width="938.0" />
       <ImageView fitHeight="142.0" fitWidth="237.0" layoutX="593.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/uofsc.png" />
@@ -34,5 +34,10 @@
             <Image url="@../images/watertower.jpg" />
          </image>
       </ImageView>
+      <Text fill="WHITE" layoutX="314.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2024 Team Salt - University of South Carolina" />
+      <Text fill="#faf7f7" layoutX="364.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help" />
+      <Text fill="#faf7f7" layoutX="450.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Privacy" />
+      <Text fill="#faf7f7" layoutX="564.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terms" />
+      <Button fx:id="backButton" layoutX="25.0" layoutY="22.0" mnemonicParsing="false" text="Back" />
    </children>
 </AnchorPane>

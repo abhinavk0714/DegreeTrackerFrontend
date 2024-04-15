@@ -42,6 +42,7 @@ public class SignUpController implements Initializable {
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
+        
     }
 
     @FXML
@@ -50,7 +51,6 @@ public class SignUpController implements Initializable {
         String lastName = txt_lastname.getText();
         String username = txt_username.getText();
         String password = txt_password.getText();
-
         facade.newStudentUser(firstName, lastName, username, password);
         switchToLogInScreen(event);
     }

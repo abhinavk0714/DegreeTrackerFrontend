@@ -9,6 +9,12 @@ import javafx.scene.control.TextField;
 import library.App;
 
 public class AdvisorController {
+   
+    private GradeSystemFACADE facade;
+    private UserList userList;
+    private User currentUser;
+    private CourseList courseList;
+    private MajorList majorList;
 
     @FXML
     private Button backButton;
@@ -26,6 +32,13 @@ public class AdvisorController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    void searchForStudent(ActionEvent event){
+        String student = studentSearchText.getText();
+        
+        
     }
 
 }

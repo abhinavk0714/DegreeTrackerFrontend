@@ -2,10 +2,7 @@ package controllers;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.ResourceBundle;
-import java.util.UUID;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,14 +13,15 @@ import library.App;
 import model.CourseList;
 import model.GradeSystemFACADE;
 import model.MajorList;
-import model.Student;
 import model.UserList;
+import model.Course;
 
 public class CourseController implements Initializable{
     private static GradeSystemFACADE facade;
     private UserList userList;
     private CourseList courseList;
     private MajorList majorList;
+    private Course course;
 
     @FXML
     private TextField txt_department;
@@ -50,6 +48,17 @@ public class CourseController implements Initializable{
         String department = txt_department.getText();
         String number = txt_courseNumber.getText();
         
-       
+       if(facade.validCourse(department,number)){
+        course = facade.findCourse(department, number);
+        if(course instanceof Course){
+            course.viewCourseDetails();
+        }
+        else{
+            System.out.println("Invalid Course");
+        }
+       }
+       else{
+        System.out.println("Invalid Course");
+       }
     }
 }

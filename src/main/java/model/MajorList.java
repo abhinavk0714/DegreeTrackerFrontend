@@ -33,6 +33,10 @@ public class MajorList {
         return majorMap;
     } 
 
+    public void saveMajor(){
+        DataWriter.saveMajor();
+    }
+
     public Major findMajor(UUID majorId)
     {
         for( int i =0; i < availableMajors.size();i++)

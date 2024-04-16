@@ -80,5 +80,6 @@
             <Image url="@../images/braxwest.png" />
          </image>
       </ImageView>
+      <Text fill="WHITE" layoutX="340.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2024 Team Salt - University of South Carolina" />
    </children>
 </AnchorPane>

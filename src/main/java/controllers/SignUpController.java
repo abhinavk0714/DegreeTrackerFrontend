@@ -34,7 +34,13 @@ public class SignUpController implements Initializable {
     private TextField txt_password;
 
     @FXML
-    private Button registerButton;
+    private Button studentButton;
+
+    @FXML
+    private Button advisorButton;
+
+    @FXML
+    private Button backButton;
 
 
     public void initialize(URL url, ResourceBundle rb) {
@@ -75,4 +81,12 @@ public class SignUpController implements Initializable {
         }
         
     }
+
+    @FXML
+    void goBack(ActionEvent event)
+    {
+       switchToLogInScreen(event);
+    }
+
+
 }

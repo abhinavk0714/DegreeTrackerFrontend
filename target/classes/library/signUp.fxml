@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="601.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignUpController">
+   <children>
+      <TextField fx:id="txt_firstname" layoutX="638.0" layoutY="288.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter First Name" />
+      <TextField fx:id="txt_lastname" layoutX="638.0" layoutY="325.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Last Name" />
+      <TextField fx:id="txt_username" layoutX="638.0" layoutY="364.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Username" />
+      <TextField fx:id="txt_password" layoutX="638.0" layoutY="404.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Password" />
+      <Button fx:id="studentButton" layoutX="576.0" layoutY="455.0" onAction="#studentRegister" prefHeight="26.0" prefWidth="124.0" text="Student Register" />
+      <Button fx:id="advisorButton" layoutX="733.0" layoutY="455.0" onAction="#advisorRegister" prefHeight="26.0" prefWidth="124.0" text="Advisor Resigter" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#74000b" height="70.0" stroke="BLACK" strokeType="INSIDE" width="938.0" />
+      <ImageView fitHeight="70.0" fitWidth="104.0" layoutX="868.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/usc-logo.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#74000b" height="50.0" layoutY="552.0" stroke="BLACK" strokeType="INSIDE" width="938.0" />
+      <ImageView fitHeight="142.0" fitWidth="237.0" layoutX="599.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/uofsc.png" />
+         </image>
+      </ImageView>
+      <Text fontSmoothingType="LCD" layoutX="662.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register as New User" textAlignment="CENTER" />
+      <ImageView fitHeight="497.0" fitWidth="547.0" layoutX="-33.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/watertower.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="314.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2024 Team Salt - University of South Carolina" />
+      <Text fill="#faf7f7" layoutX="364.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help" />
+      <Text fill="#faf7f7" layoutX="450.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Privacy" />
+      <Text fill="#faf7f7" layoutX="564.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terms" />
+      <Button fx:id="backButton" layoutX="25.0" layoutY="22.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+   </children>
+</AnchorPane>

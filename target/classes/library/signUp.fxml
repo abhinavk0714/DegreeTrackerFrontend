@@ -10,12 +10,12 @@
 
 <AnchorPane prefHeight="601.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignUpController">
    <children>
-      <TextField fx:id="txt_firstname" layoutX="638.0" layoutY="288.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter First Name" />
-      <TextField fx:id="txt_lastname" layoutX="638.0" layoutY="325.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Last Name" />
-      <TextField fx:id="txt_username" layoutX="638.0" layoutY="364.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Username" />
-      <TextField fx:id="txt_password" layoutX="638.0" layoutY="404.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Password" />
-      <Button fx:id="studentButton" layoutX="576.0" layoutY="455.0" onAction="#studentRegister" prefHeight="26.0" prefWidth="124.0" text="Student Register" />
-      <Button fx:id="advisorButton" layoutX="733.0" layoutY="455.0" onAction="#advisorRegister" prefHeight="26.0" prefWidth="124.0" text="Advisor Resigter" />
+      <TextField fx:id="txt_firstname" layoutX="638.0" layoutY="298.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter First Name" />
+      <TextField fx:id="txt_lastname" layoutX="638.0" layoutY="336.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Last Name" />
+      <TextField fx:id="txt_username" layoutX="638.0" layoutY="373.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Username" />
+      <TextField fx:id="txt_password" layoutX="638.0" layoutY="413.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Password" />
+      <Button fx:id="studentButton" layoutX="623.0" layoutY="455.0" onAction="#studentRegister" prefHeight="77.0" prefWidth="77.0" text="Student Register" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="advisorButton" layoutX="735.0" layoutY="455.0" onAction="#advisorRegister" prefHeight="77.0" prefWidth="77.0" text="Advisor Resigter" textAlignment="CENTER" wrapText="true" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#74000b" height="70.0" stroke="BLACK" strokeType="INSIDE" width="938.0" />
       <ImageView fitHeight="70.0" fitWidth="104.0" layoutX="868.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -28,7 +28,7 @@
             <Image url="@../images/uofsc.png" />
          </image>
       </ImageView>
-      <Text fontSmoothingType="LCD" layoutX="662.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register as New User" textAlignment="CENTER" />
+      <Text fontSmoothingType="LCD" layoutX="662.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register as New User" textAlignment="CENTER" />
       <ImageView fitHeight="497.0" fitWidth="547.0" layoutX="-33.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/watertower.jpg" />

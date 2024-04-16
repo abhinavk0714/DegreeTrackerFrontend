@@ -22,7 +22,7 @@
             <Image url="@../images/usc-logo.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#74000b" height="49.0" layoutY="552.0" stroke="BLACK" strokeType="INSIDE" width="938.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#74000b" height="50.0" layoutY="552.0" stroke="BLACK" strokeType="INSIDE" width="938.0" />
       <ImageView fitHeight="142.0" fitWidth="237.0" layoutX="593.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/uofsc.png" />

@@ -52,7 +52,7 @@ public class CourseList {
         courseList.listOfCourses.put(course.getId(), course);
     }
 
-    // public void saveCourses() {
-    //     DataWriter.saveCourses(listOfCourses);
-    // }
+    public void saveCourses() {
+         DataWriter.saveCourses();
+    }
 }

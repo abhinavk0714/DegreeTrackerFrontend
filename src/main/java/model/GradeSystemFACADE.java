@@ -52,6 +52,23 @@ public class GradeSystemFACADE {
     public Course findCourse(String department, String number) {
         return courseList.getCourseByNumber(department, number);
     }
+    /**
+     * This method is to check if the user's entered course for course search is valid
+     * @param department the user's entered department
+     * @param number the user's entered course number
+     * @return A boolean on if the course is valid
+     */
+    public boolean validCourse(String department, String number){
+        Course course = courseList.getCourseByNumber(department, number);
+        if( course.getDepartment().equals(department) || course.getNumber().equals(number)){
+        return true;
+        }
+        else{
+            System.out.println("Invalid Course");
+            return false;
+        }
+        
+    }
     
     /**
     * This method is to login to the system when given the username and password

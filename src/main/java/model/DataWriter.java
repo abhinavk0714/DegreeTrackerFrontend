@@ -24,7 +24,7 @@ public class DataWriter extends DataConstants {
         }
 
         
-        try (FileWriter file = new FileWriter("json/advisor.json")) {
+        try (FileWriter file = new FileWriter(ADVISOR_FILE_NAME)) {
             file.write(jsonAdvisors.toJSONString());
             file.flush();
         } catch (IOException e) {
@@ -62,7 +62,7 @@ public class DataWriter extends DataConstants {
         }
 
         // Writing the JSON array to file
-        try (FileWriter file = new FileWriter("json/course.json")) {
+        try (FileWriter file = new FileWriter(COURSE_FILE_NAME)) {
             file.write(jsonCourses.toJSONString());
             file.flush();
         } catch (IOException e) {
@@ -129,7 +129,7 @@ public class DataWriter extends DataConstants {
             jsonStudents.add(getStudentJSON(student));
         }
 
-        try (FileWriter file = new FileWriter("json/students.json")) { //DataConstants.STUDENT_FILE_NAME
+        try (FileWriter file = new FileWriter(STUDENT_FILE_NAME)) { //DataConstants.STUDENT_FILE_NAME
             file.write(jsonStudents.toJSONString());
             file.flush();
         } catch (IOException e) {

@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import library.App;
 
 public class AdvisorController {
@@ -37,7 +38,14 @@ public class AdvisorController {
     @FXML
     void searchForStudent(ActionEvent event){
         String student = studentSearchText.getText();
+        Student searchedStudent;
         
+        if(facade.findStudent(student) != null){
+            searchedStudent = facade.findStudent(student);
+
+        } else {
+            System.out.println("This is not a valid student");
+        }
         
     }
 

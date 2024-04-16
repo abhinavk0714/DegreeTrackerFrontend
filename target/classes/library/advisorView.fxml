@@ -26,5 +26,6 @@
       <Text fill="WHITE" layoutX="426.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Privacy" />
       <Text fill="WHITE" layoutX="498.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terms" />
       <Button fx:id="studentSearchButton" layoutX="636.0" layoutY="108.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="35.0" text="🔍" />
+      <Text fill="#f8f8f8" layoutX="286.0" layoutY="568.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2024 Team Salt - University of South Carolina" />
    </children>
 </AnchorPane>

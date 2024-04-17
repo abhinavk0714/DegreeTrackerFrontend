@@ -2,10 +2,14 @@ package controllers;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
@@ -103,26 +107,11 @@ public class StudentController {
 
     @FXML
     void initialize() {
-        assert backButton != null : "fx:id=\"backButton\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert courseSearchButton != null : "fx:id=\"courseSearchButton\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert courseSearchText != null : "fx:id=\"courseSearchText\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester1 != null : "fx:id=\"semester1\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester1courses != null : "fx:id=\"semester1courses\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester2 != null : "fx:id=\"semester2\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester2courses != null : "fx:id=\"semester2courses\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester3 != null : "fx:id=\"semester3\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester3courses != null : "fx:id=\"semester3courses\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester4 != null : "fx:id=\"semester4\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester4courses != null : "fx:id=\"semester4courses\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester5 != null : "fx:id=\"semester5\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester5courses != null : "fx:id=\"semester5courses\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester6 != null : "fx:id=\"semester6\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester6courses != null : "fx:id=\"semester6courses\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester7 != null : "fx:id=\"semester7\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester7courses != null : "fx:id=\"semester7courses\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester8 != null : "fx:id=\"semester8\" was not injected: check your FXML file 'studentView.fxml'.";
-        assert semester8courses != null : "fx:id=\"semester8courses\" was not injected: check your FXML file 'studentView.fxml'.";
-
+        this.userList = UserList.getInstance();
+        this.courseList = CourseList.getInstance();
+        this.majorList = MajorList.getInstance();
+        this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
+        this.currentUser = facade.getUser();
     }
-
+    
 }

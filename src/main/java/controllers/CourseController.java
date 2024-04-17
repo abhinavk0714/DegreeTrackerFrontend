@@ -17,7 +17,7 @@ import model.UserList;
 import model.Course;
 
 public class CourseController implements Initializable{
-    private static GradeSystemFACADE facade;
+    private GradeSystemFACADE facade;
     private UserList userList;
     private CourseList courseList;
     private MajorList majorList;

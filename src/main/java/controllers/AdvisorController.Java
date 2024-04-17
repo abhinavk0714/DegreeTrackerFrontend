@@ -14,7 +14,7 @@ import javafx.scene.layout.VBox;
 import library.App;
 import model.*;
 
-public class AdvisorController {
+public class AdvisorController implements Initializable {
    
     private GradeSystemFACADE facade;
     private UserList userList;

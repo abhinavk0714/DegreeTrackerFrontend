@@ -33,9 +33,22 @@ public class CourseController implements Initializable{
     private Button searchButton;
 
     @FXML
+    private Button backButton;
+
+    @FXML
     private void switchToPrimary() throws IOException {
         App.setRoot("Course");
     }
+
+    @FXML
+    void switchToStudentView(ActionEvent event) {
+        try {
+            App.setRoot("studentView");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         this.userList = UserList.getInstance();

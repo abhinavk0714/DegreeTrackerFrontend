@@ -64,7 +64,7 @@ public class CourseController implements Initializable{
        if(facade.validCourse(department,number)){
         course = facade.findCourse(department, number);
         if(course instanceof Course){
-            course.viewCourseDetails();
+            System.out.println(course.viewCourseDetails());
         }
         else{
             System.out.println("Invalid Course");

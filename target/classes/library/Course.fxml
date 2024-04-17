@@ -23,9 +23,9 @@
       <Text fill="WHITE" layoutX="368.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help" />
       <Text fill="WHITE" layoutX="426.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Privacy" />
       <Text fill="WHITE" layoutX="498.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terms" />
-      <TextField fx:id="txt_department" layoutX="206.0" layoutY="218.0" promptText="Department" />
-      <TextField fx:id="txt_coursenumber" layoutX="206.0" layoutY="256.0" promptText="Course Number" />
-      <Button fx:id="searchButton" layoutX="253.0" layoutY="304.0" mnemonicParsing="false" text="Search" />
+      <TextField fx:id="txt_department" layoutX="206.0" layoutY="218.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Department" stylesheets="@styles.css" />
+      <TextField fx:id="txt_coursenumber" layoutX="206.0" layoutY="256.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Course Number" />
+      <Button fx:id="searchButton" layoutX="253.0" layoutY="304.0" mnemonicParsing="false" onAction="#courseSearch" text="Search" />
       <Text fill="WHITE" layoutX="292.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2024 Team Salt - University of South Carolina" />
       <TableView layoutX="491.0" layoutY="118.0" prefHeight="200.0" prefWidth="200.0">
         <columns>

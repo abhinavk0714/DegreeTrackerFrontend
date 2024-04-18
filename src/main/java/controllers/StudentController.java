@@ -161,7 +161,6 @@ public class StudentController {
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
         this.student = facade.findStudent("HTawnie");
-<<<<<<< HEAD
         studentAdvisorLabel.setText("Advisor: " + student.getAdvisor().getFirstName() + " " + student.getAdvisor().getLastName());
         studentClassificationLabel.setText("Classification: " + student.getClassification());
         studentFlagsLabel.setText("Flags: " + student.getFlag());
@@ -180,23 +179,8 @@ public class StudentController {
             populateSemesterTable(semester7Table, eightSemesterPlan.getSemesters().get(6));
             populateSemesterTable(semester8Table, eightSemesterPlan.getSemesters().get(7));
         }
-        
-=======
-        // studentAdvisorLabel.setText
-        // EightSemesterPlan eightSemesterPlan = student.getEightSemesterPlan();
-        // if (eightSemesterPlan != null) {
-        //     populateSemesterTable(semester1Table, eightSemesterPlan.getSemesters().get(0));
-        //     populateSemesterTable(semester2Table, eightSemesterPlan.getSemesters().get(1));
-        //     populateSemesterTable(semester3Table, eightSemesterPlan.getSemesters().get(2));
-        //     populateSemesterTable(semester4Table, eightSemesterPlan.getSemesters().get(3));
-        //     populateSemesterTable(semester5Table, eightSemesterPlan.getSemesters().get(4));
-        //     populateSemesterTable(semester6Table, eightSemesterPlan.getSemesters().get(5));
-        //     populateSemesterTable(semester7Table, eightSemesterPlan.getSemesters().get(6));
-        //     populateSemesterTable(semester8Table, eightSemesterPlan.getSemesters().get(7));
-        // }
->>>>>>> d0d30c6e26263ed65669ed28f681c740aa89a9d2
     }
-
+    
     private void populateSemesterTable(TableView<Course> table, ArrayList<Course> courses) {
         TableView<Course> tableView = new TableView<>();
 

@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.fxml.Initializable;
 import library.App;
@@ -34,6 +35,9 @@ public class CourseController implements Initializable{
 
     @FXML
     private Button backButton;
+
+    @FXML
+    private Label lbl_error;
 
     @FXML
     private void switchToPrimary() throws IOException {
@@ -67,7 +71,8 @@ public class CourseController implements Initializable{
             System.out.println(course.viewCourseDetails());
         }
         else{
-            System.out.println("Invalid Course");
+            lbl_error.setText("Invalid Course");
+            return;
         }
        }
        else{

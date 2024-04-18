@@ -44,16 +44,16 @@ public class CourseController implements Initializable{
     private TableView<Course> courseTable;
 
     @FXML
-    private Label lbl_Coreq;
+    private Label lbl_coreq;
 
     @FXML
-    private Label lbl_Description;
+    private Label lbl_description;
 
     @FXML
-    private Label lbl_Prereq;
+    private Label lbl_prereq;
 
     @FXML
-    private Label lbl_avalilbility;
+    private Label lbl_availability;
 
     @FXML
     private Label lbl_courseName;

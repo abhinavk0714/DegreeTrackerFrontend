@@ -57,8 +57,17 @@ public class SignUpController implements Initializable {
         String lastName = txt_lastname.getText();
         String username = txt_username.getText();
         String password = txt_password.getText();
-        facade.newStudentUser(firstName, lastName, username, password);
-        switchToLogInScreen(event);
+        if (facade.newStudentUser(firstName, lastName, username, password) == false)
+        {
+
+        }
+        else 
+        { 
+            switchToLogInScreen(event);
+        }
+            
+        
+        
     }
 
     @FXML 

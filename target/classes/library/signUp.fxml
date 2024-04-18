@@ -28,7 +28,7 @@
             <Image url="@../images/uofsc.png" />
          </image>
       </ImageView>
-      <Text fontSmoothingType="LCD" layoutX="662.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register as New User" textAlignment="CENTER" />
+      <Text fx:id="text" fontSmoothingType="LCD" layoutX="661.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register as New User" textAlignment="CENTER" />
       <ImageView fitHeight="497.0" fitWidth="547.0" layoutX="-33.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/watertower.jpg" />

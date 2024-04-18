@@ -21,6 +21,9 @@
          </image>
       </ImageView>
       <Button fx:id="backButton" layoutX="26.0" layoutY="23.0" mnemonicParsing="false" onAction="#backToLogin" text="Back" />
+      <Button fx:id="LObutton" layoutX="26.0" layoutY="23.0" mnemonicParsing="false" onAction="#backToLogin" text="Log Out" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7da" height="330.0" layoutX="26.0" layoutY="178.0" stroke="WHITE" strokeType="INSIDE" width="504.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7da" height="330.0" layoutX="581.0" layoutY="178.0" stroke="WHITE" strokeType="INSIDE" width="259.0" />
       <Text fill="WHITE" layoutX="368.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help" />
       <Text fill="WHITE" layoutX="426.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Privacy" />
       <Text fill="WHITE" layoutX="498.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terms" />

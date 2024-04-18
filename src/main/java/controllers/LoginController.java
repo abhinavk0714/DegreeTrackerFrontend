@@ -86,10 +86,10 @@ public class LoginController implements Initializable {
             if (currentUser instanceof Student) {
                 switchToStudentView(event);
             } else {
-                message.setText("The user is not a student.");
+                message.setText("The user is not a student");
             }
         } else {
-           message.setText("Invalid login credentials.");
+           message.setText("Invalid login credentials");
         }
     }
     

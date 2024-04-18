@@ -1,6 +1,7 @@
 package model;
 
-//import java.util.ArrayList;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.UUID;
 
 public class GradeSystemFACADE {
@@ -91,6 +92,7 @@ public class GradeSystemFACADE {
         return course.viewCourseDetails();
     }
     
+
     public String getUserDetails(String username) {
         User user = userList.getUser(username);
         return user != null ? user.toString() : "User not found.";
@@ -157,6 +159,20 @@ public class GradeSystemFACADE {
         
     }
 
+    public String viewMajorDetails(){
+        HashMap<UUID, Course> coursesMap = DataLoader.loadCourses();
+        ArrayList<Major> majors = DataLoader.loadMajors(coursesMap);
+        ArrayList<Student> students = DataLoader.loadStudents(coursesMap);
+       
+        // Printing majors
+        System.out.println("\nMajors:");
+        for (Major major : majors) {
+            String majorInfo = major.toString();
+            return majorInfo;
+        }
+        return null;
+    }
+
 
     
     //added a create new student method
@@ -178,8 +194,14 @@ public class GradeSystemFACADE {
         MajorList majorList = MajorList.getInstance();
         CourseList courseList = CourseList.getInstance();
         GradeSystemFACADE facadeInstance = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
-        facadeInstance.login("BWest", "12345");
+        if(!facadeInstance.login("BWest", "12345")){
+            System.out.println("LoginFailed");
+        }
         String currentUsername = facadeInstance.currentUser.getUsername();
         System.out.println(currentUsername);
+        String majorDetails = facadeInstance.viewMajorDetails();
+        System.out.println("starts here.......");
+        System.out.println(majorDetails);
+
     } 
 }

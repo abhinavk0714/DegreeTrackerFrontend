@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import library.App;
 import model.*;
 
@@ -42,13 +43,16 @@ public class SignUpController implements Initializable {
     @FXML
     private Button backButton;
 
+    @FXML
+    private Text text;
+
 
     public void initialize(URL url, ResourceBundle rb) {
         this.userList = UserList.getInstance();
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
-        
+        text.setText("Resgister as a new user");
     }
 
     @FXML
@@ -59,10 +63,11 @@ public class SignUpController implements Initializable {
         String password = txt_password.getText();
         if (facade.newStudentUser(firstName, lastName, username, password) == false)
         {
-            
+            text.setText("Username is already taken");
         }
         else 
         { 
+            text.setText("Successful");
             switchToLogInScreen(event);
         }
             

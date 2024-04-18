@@ -156,7 +156,7 @@
             <Image url="@../images/usc-logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="backButton" layoutX="25.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToLogin" text="Back" />
+      <Button fx:id="LObutton" layoutX="25.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToLogin" text="Log Out" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7da" height="218.0" layoutX="14.0" layoutY="82.0" stroke="WHITE" strokeType="INSIDE" width="453.0" />
       <TextField fx:id="courseSearchText" layoutX="766.0" layoutY="89.0" promptText="Course Search" />
       <Button fx:id="courseSearchButton" layoutX="721.0" layoutY="89.0" mnemonicParsing="false" onAction="#switchToCourseView" text="🔍" />

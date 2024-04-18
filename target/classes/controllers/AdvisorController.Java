@@ -24,7 +24,7 @@ public class AdvisorController implements Initializable {
     private MajorList majorList;
     
     @FXML
-    private Button backButton;
+    private Button LOButton;
     
     @FXML
     private Button studentSearchButton;
@@ -55,17 +55,25 @@ public class AdvisorController implements Initializable {
     }
 
     @FXML
-    void searchForStudent(ActionEvent event){
-        String student = studentSearchText.getText();
-        Student searchedStudent;
-        
-        if(facade.findStudent(student) != null){
-            searchedStudent = facade.findStudent(student);
+    void switchToStudentView(ActionEvent event) {
+        try {
+            App.setRoot("studentView");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    @FXML
+    void searchForStudent(ActionEvent event){
+        String searchedStudent = studentSearchText.getText();
+        Student tempStudent;
+        
+        if(facade.findStudent(searchedStudent) != null){
+            
         } else {
             System.out.println("This is not a valid student");
         }
-        
     }
+
 }
 

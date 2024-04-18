@@ -116,6 +116,27 @@ public class StudentController {
     private TableView<Course> semester8Table;
 
     @FXML
+    private Label studentAdvisorLabel;
+
+    @FXML
+    private Label studentClassificationLabel;
+
+    @FXML
+    private Label studentFlagsLabel;
+
+    @FXML
+    private Label studentGPALabel;
+
+    @FXML
+    private Label studentIDLabel;
+
+    @FXML
+    private Label studentMajorLabel;
+
+    @FXML
+    private Label studentNameLabel;
+
+    @FXML
     void switchToCourseView(ActionEvent event) {
         try {
             App.setRoot("Course");
@@ -140,6 +161,7 @@ public class StudentController {
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
         this.student = facade.findStudent("HTawnie");
+        studentAdvisorLabel.setText
         EightSemesterPlan eightSemesterPlan = student.getEightSemesterPlan();
         if (eightSemesterPlan != null) {
             populateSemesterTable(semester1Table, eightSemesterPlan.getSemesters().get(0));
@@ -150,7 +172,6 @@ public class StudentController {
             populateSemesterTable(semester6Table, eightSemesterPlan.getSemesters().get(5));
             populateSemesterTable(semester7Table, eightSemesterPlan.getSemesters().get(6));
             populateSemesterTable(semester8Table, eightSemesterPlan.getSemesters().get(7));
-
         }
     }
 

@@ -24,7 +24,6 @@ public class StudentController {
 
     private GradeSystemFACADE facade;
     private UserList userList;
-    private User currentUser;
     private CourseList courseList;
     private MajorList majorList;
     private Student student;
@@ -140,7 +139,7 @@ public class StudentController {
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
-        this.currentUser = facade.getUser();
+        this.student = facade.findStudent("HTawnie");
         EightSemesterPlan eightSemesterPlan = student.getEightSemesterPlan();
         if (eightSemesterPlan != null) {
             populateSemesterTable(semester1Table, eightSemesterPlan.getSemesters().get(0));
@@ -156,6 +155,8 @@ public class StudentController {
     }
 
     private void populateSemesterTable(TableView<Course> table, ArrayList<Course> courses) {
+        TableView<Course> tableView = new TableView<>();
+
         TableColumn<Course, String> departmentColumn = new TableColumn<>("Department");
         departmentColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDepartment()));
 
@@ -171,7 +172,7 @@ public class StudentController {
         TableColumn<Course, String> descriptionColumn = new TableColumn<>("Description");
         departmentColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDescription()));
 
-        table.getColumns().addAll(departmentColumn, numberColumn, nameColumn, creditHoursColumn, descriptionColumn);
+        tableView.getColumns().addAll(departmentColumn, numberColumn, nameColumn, creditHoursColumn, descriptionColumn);
         table.getItems().addAll(courses);
     }
 

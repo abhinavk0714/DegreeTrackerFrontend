@@ -69,9 +69,10 @@ public class User {
         if (this.username.equals(username) && this.password.equals(password)) {
             this.loggedIn = true;
             return true;
+        } else {
+            this.loggedIn = false;
+            return false;
         }
-        this.loggedIn = false;
-        return false;
     }
 
     /**

@@ -2,6 +2,7 @@ package model;
 
 //import java.util.ArrayList;
 import java.util.UUID;
+
 public class GradeSystemFACADE {
     
     private static GradeSystemFACADE facade;
@@ -43,12 +44,6 @@ public class GradeSystemFACADE {
     }
     
     
-    /**
-    * This method is to search through the course list and find a course by department and number
-    * @param number - the course number as in 247 in CSCE 247
-    * @param department - the department of the course as in the CSCE in CSCE 247
-    * @return - the course with the matching department and number
-    */
     public Course findCourse(String department, String number) {
         return courseList.getCourseByNumber(department, number);
     }
@@ -70,12 +65,6 @@ public class GradeSystemFACADE {
         
     }
     
-    /**
-    * This method is to login to the system when given the username and password
-    * @param username - the user's entered username
-    * @param password - the user's entered password
-    * @return - A boolean on wether the login was successful or not
-    */
     public boolean login(String username, String password) {
         User user = userList.getUser(username);
         if (user == null || !user.getUsername().equals(username) || !user.getPassword().equals(password))
@@ -103,7 +92,8 @@ public class GradeSystemFACADE {
     }
     
     public String getUserDetails(String username) {
-        return userList.getUser(username).toString();
+        User user = userList.getUser(username);
+        return user != null ? user.toString() : "User not found.";
     }
     
     // HIGHES PRIORITY METHODS TO COMPLETE
@@ -166,17 +156,30 @@ public class GradeSystemFACADE {
         }
         
     }
+
+
     
     //added a create new student method
     public boolean newStudentUser(String fn,String ln, String userName, String password)
     {
-        return userList.addStudent(new Student(UUID.randomUUID(), userName, password, userName, password));
+        userList.addStudent(new Student(UUID.randomUUID(), userName, password, userName, password));
+        userList.saveStudents();
     }
     
     // added a create new advisor method
     public boolean newAdvisorUser(String fn,String ln, String userName, String password)
     {
-        return userList.addAdvisor(new Advisor(UUID.randomUUID(), fn, ln, userName, password, null));
+        userList.addAdvisor(new Advisor(UUID.randomUUID(), fn, ln, userName, password, null));
+        userList.saveAdvisors();
     }
 
+    public static void main(String[] args) {
+        UserList userList = UserList.getInstance();
+        MajorList majorList = MajorList.getInstance();
+        CourseList courseList = CourseList.getInstance();
+        GradeSystemFACADE facadeInstance = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
+        facadeInstance.login("BWest", "12345");
+        String currentUsername = facadeInstance.currentUser.getUsername();
+        System.out.println(currentUsername);
+    } 
 }

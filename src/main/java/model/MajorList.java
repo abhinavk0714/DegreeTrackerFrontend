@@ -12,8 +12,8 @@ public class MajorList {
 
 
     private MajorList() {
-        courseMap = DataLoader.loadCourses();
-        this.availableMajors = DataLoader.loadMajors(courseMap);
+        //courseMap = DataLoader.loadCourses();
+        this.availableMajors = null; //DataLoader.loadMajors(courseMap);
         this.majorMap = new HashMap<>();
 
     }

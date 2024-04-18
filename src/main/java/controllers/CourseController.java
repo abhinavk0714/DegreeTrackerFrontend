@@ -17,7 +17,7 @@ import model.UserList;
 import model.Course;
 
 public class CourseController implements Initializable{
-    private static GradeSystemFACADE facade;
+    private GradeSystemFACADE facade;
     private UserList userList;
     private CourseList courseList;
     private MajorList majorList;
@@ -33,9 +33,22 @@ public class CourseController implements Initializable{
     private Button searchButton;
 
     @FXML
+    private Button backButton;
+
+    @FXML
     private void switchToPrimary() throws IOException {
         App.setRoot("Course");
     }
+
+    @FXML
+    void switchToStudentView(ActionEvent event) {
+        try {
+            App.setRoot("studentView");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         this.userList = UserList.getInstance();
@@ -51,7 +64,7 @@ public class CourseController implements Initializable{
        if(facade.validCourse(department,number)){
         course = facade.findCourse(department, number);
         if(course instanceof Course){
-            course.viewCourseDetails();
+            System.out.println(course.viewCourseDetails());
         }
         else{
             System.out.println("Invalid Course");

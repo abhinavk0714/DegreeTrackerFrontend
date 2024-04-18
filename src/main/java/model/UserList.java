@@ -68,18 +68,34 @@ public class UserList {
      * Adds an advisor to the list of advisors 
      * @param advisor the advisor to be added
      */
-    public void addAdvisor(Advisor advisor)
+    public boolean addAdvisor(Advisor advisor)
     {
+        String username = advisor.getUsername();
+        for (int i = 0; i < listOfAdvisors.size();i++)
+        {
+            if (username.equals(listOfAdvisors.get(i).getUsername())) {
+                return false;
+            }
+        }
         listOfAdvisors.add(advisor);
+        return true;
     }
 
     /**
      * Adds a student to the list of students
      * @param student the student to be added
      */
-    public void addStudent(Student student)
+    public boolean addStudent(Student student)
     {
+        String username = student.getUsername();
+        for (int i = 0; i < listOfStudents.size();i++)
+        {
+            if (username.equals(listOfStudents.get(i).getUsername())) {
+                return false;
+            }
+        }
         listOfStudents.add(student);
+        return true;
     }
 
     public void saveStudents() {

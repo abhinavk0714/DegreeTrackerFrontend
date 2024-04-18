@@ -37,5 +37,6 @@
       <Text fill="#faf7f7" layoutX="388.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help" />
       <Text fill="#faf7f7" layoutX="464.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Privacy" />
       <Text fill="#faf7f7" layoutX="550.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terms" />
+      <Text fx:id="message" layoutX="622.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log In" textAlignment="CENTER" wrappingWidth="222.24334716796875" />
    </children>
 </AnchorPane>

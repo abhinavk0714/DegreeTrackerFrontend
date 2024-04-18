@@ -176,17 +176,17 @@ public class GradeSystemFACADE {
 
     
     //added a create new student method
-    public void newStudentUser(String fn,String ln, String userName, String password)
+    public boolean newStudentUser(String fn,String ln, String userName, String password)
     {
-        userList.addStudent(new Student(UUID.randomUUID(), userName, password, userName, password));
-        userList.saveStudents();
+        return userList.addStudent(new Student(UUID.randomUUID(), userName, password, userName, password));
+        //userList.saveStudents();
     }
     
     // added a create new advisor method
-    public void newAdvisorUser(String fn,String ln, String userName, String password)
+    public boolean newAdvisorUser(String fn,String ln, String userName, String password)
     {
-        userList.addAdvisor(new Advisor(UUID.randomUUID(), fn, ln, userName, password, null));
-        userList.saveAdvisors();
+        return userList.addAdvisor(new Advisor(UUID.randomUUID(), fn, ln, userName, password, null));
+        //userList.saveAdvisors();
     }
 
     public static void main(String[] args) {

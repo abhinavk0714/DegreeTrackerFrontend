@@ -24,7 +24,6 @@ public class StudentController {
 
     private GradeSystemFACADE facade;
     private UserList userList;
-    private User currentUser;
     private CourseList courseList;
     private MajorList majorList;
     private Student student;
@@ -117,6 +116,27 @@ public class StudentController {
     private TableView<Course> semester8Table;
 
     @FXML
+    private Label studentAdvisorLabel;
+
+    @FXML
+    private Label studentClassificationLabel;
+
+    @FXML
+    private Label studentFlagsLabel;
+
+    @FXML
+    private Label studentGPALabel;
+
+    @FXML
+    private Label studentIDLabel;
+
+    @FXML
+    private Label studentMajorLabel;
+
+    @FXML
+    private Label studentNameLabel;
+
+    @FXML
     void switchToCourseView(ActionEvent event) {
         try {
             App.setRoot("Course");
@@ -140,7 +160,8 @@ public class StudentController {
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
-        this.currentUser = facade.getUser();
+        this.student = facade.findStudent("HTawnie");
+        studentAdvisorLabel.setText
         EightSemesterPlan eightSemesterPlan = student.getEightSemesterPlan();
         if (eightSemesterPlan != null) {
             populateSemesterTable(semester1Table, eightSemesterPlan.getSemesters().get(0));
@@ -151,11 +172,12 @@ public class StudentController {
             populateSemesterTable(semester6Table, eightSemesterPlan.getSemesters().get(5));
             populateSemesterTable(semester7Table, eightSemesterPlan.getSemesters().get(6));
             populateSemesterTable(semester8Table, eightSemesterPlan.getSemesters().get(7));
-
         }
     }
 
     private void populateSemesterTable(TableView<Course> table, ArrayList<Course> courses) {
+        TableView<Course> tableView = new TableView<>();
+
         TableColumn<Course, String> departmentColumn = new TableColumn<>("Department");
         departmentColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDepartment()));
 
@@ -171,7 +193,7 @@ public class StudentController {
         TableColumn<Course, String> descriptionColumn = new TableColumn<>("Description");
         departmentColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDescription()));
 
-        table.getColumns().addAll(departmentColumn, numberColumn, nameColumn, creditHoursColumn, descriptionColumn);
+        tableView.getColumns().addAll(departmentColumn, numberColumn, nameColumn, creditHoursColumn, descriptionColumn);
         table.getItems().addAll(courses);
     }
 

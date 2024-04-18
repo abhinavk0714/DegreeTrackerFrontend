@@ -35,7 +35,7 @@ public class StudentController {
     private URL location;
 
     @FXML
-    private Button backButton;
+    private Button LOButton;
 
     @FXML
     private Button courseSearchButton;

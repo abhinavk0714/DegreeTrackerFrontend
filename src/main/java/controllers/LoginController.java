@@ -45,6 +45,7 @@ public class LoginController implements Initializable {
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
+        error.setText(" ");
     }
     
     @FXML

@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.fxml.Initializable;
 import library.App;
@@ -38,6 +39,33 @@ public class CourseController implements Initializable{
 
     @FXML
     private Label lbl_error;
+
+    @FXML
+    private TableView<Course> courseTable;
+
+    @FXML
+    private Label lbl_Coreq;
+
+    @FXML
+    private Label lbl_Description;
+
+    @FXML
+    private Label lbl_Prereq;
+
+    @FXML
+    private Label lbl_avalilbility;
+
+    @FXML
+    private Label lbl_courseName;
+
+    @FXML
+    private Label lbl_courseNumber;
+
+    @FXML
+    private Label lbl_creditHours;
+
+    @FXML
+    private Label lbl_department;
 
     @FXML
     private void switchToPrimary() throws IOException {

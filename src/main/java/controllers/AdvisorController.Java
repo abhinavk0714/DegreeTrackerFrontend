@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
@@ -32,7 +33,7 @@ public class AdvisorController implements Initializable {
     private TextField studentSearchText;
     
     @FXML
-    private TextArea welcomeUserText;
+    private Label welcomeUserLabel;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -40,6 +41,8 @@ public class AdvisorController implements Initializable {
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
+
+        welcomeUserLabel.setText("Welcome, " + facade.getUser().getFirstName() + " " + facade.getUser().getLastName() + "!");
     }
     
     @FXML

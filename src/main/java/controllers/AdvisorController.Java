@@ -24,7 +24,7 @@ public class AdvisorController implements Initializable {
     private MajorList majorList;
     
     @FXML
-    private Button backButton;
+    private Button LOButton;
     
     @FXML
     private Button studentSearchButton;

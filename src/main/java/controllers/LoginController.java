@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import library.App;
 import model.*;
 
@@ -37,7 +38,7 @@ public class LoginController implements Initializable {
     private Button studentLoginButton;
 
     @FXML
-    private Label error;
+    private Text message;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -45,7 +46,7 @@ public class LoginController implements Initializable {
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
-        error.setText(" ");
+        message.setText("Log In");
     }
     
     @FXML
@@ -85,10 +86,10 @@ public class LoginController implements Initializable {
             if (currentUser instanceof Student) {
                 switchToStudentView(event);
             } else {
-                error.setText("The user is not a student.");
+                message.setText("The user is not a student.");
             }
         } else {
-           error.setText("Invalid login credentials.");
+           message.setText("Invalid login credentials.");
         }
     }
     

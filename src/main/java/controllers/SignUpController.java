@@ -59,7 +59,7 @@ public class SignUpController implements Initializable {
         String password = txt_password.getText();
         if (facade.newStudentUser(firstName, lastName, username, password) == false)
         {
-
+            
         }
         else 
         { 

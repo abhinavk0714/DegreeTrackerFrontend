@@ -387,29 +387,6 @@ public class DataLoader extends DataConstants {
         ArrayList<Major> majors = DataLoader.loadMajors(coursesMap);
         ArrayList<Student> students = DataLoader.loadStudents(coursesMap);
        
-        // Printing students
-        System.out.println("Students:");
-        for (Student student : students) {
-            System.out.println(student.toString());
-            System.out.println();
-        }
-         // Verify the size of the student list
-        int numberOfStudents = students.size();
-        System.out.println("Number of students loaded: " + numberOfStudents);
-    
-        /*/Printing courses
-        System.out.println("\nCourses:");
-        for (Course course : coursesMap.values()) {
-            System.out.println(course.toString());
-            }*/
-        
-        
-        // Printing advisors
-        System.out.println("\nAdvisors:");
-        for (Advisor advisor : advisors) {
-            System.out.println(advisor);
-        }
-        
         // Printing majors
         System.out.println("\nMajors:");
         for (Major major : majors) {

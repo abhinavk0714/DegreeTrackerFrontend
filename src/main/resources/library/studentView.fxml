@@ -22,8 +22,11 @@
                      <children>
                         <TableView prefHeight="200.0" prefWidth="903.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn prefWidth="75.0" text="Department" />
+                            <TableColumn prefWidth="75.0" text="Number" />
+                            <TableColumn prefWidth="200.0" text="Name" />
+                            <TableColumn prefWidth="75.0" text="Credit Hours" />
+                            <TableColumn prefWidth="400.0" text="Description" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>
@@ -35,8 +38,11 @@
                      <children>
                         <TableView prefHeight="200.0" prefWidth="903.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn prefWidth="75.0" text="Department" />
+                            <TableColumn prefWidth="75.0" text="Number" />
+                            <TableColumn prefWidth="200.0" text="Name" />
+                            <TableColumn prefWidth="75.0" text="Credit Hours" />
+                            <TableColumn prefWidth="400.0" text="Description" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>
@@ -48,8 +54,11 @@
                      <children>
                         <TableView prefHeight="200.0" prefWidth="903.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn prefWidth="75.0" text="Department" />
+                            <TableColumn prefWidth="75.0" text="Number" />
+                            <TableColumn prefWidth="200.0" text="Name" />
+                            <TableColumn prefWidth="75.0" text="Credit Hours" />
+                            <TableColumn prefWidth="400.0" text="Description" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>
@@ -61,8 +70,11 @@
                      <children>
                         <TableView prefHeight="200.0" prefWidth="903.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn prefWidth="75.0" text="Department" />
+                            <TableColumn prefWidth="75.0" text="Number" />
+                            <TableColumn prefWidth="200.0" text="Name" />
+                            <TableColumn prefWidth="75.0" text="Credit Hours" />
+                            <TableColumn prefWidth="400.0" text="Description" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>
@@ -74,8 +86,11 @@
                      <children>
                         <TableView prefHeight="200.0" prefWidth="903.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn prefWidth="75.0" text="Department" />
+                            <TableColumn prefWidth="75.0" text="Number" />
+                            <TableColumn prefWidth="200.0" text="Name" />
+                            <TableColumn prefWidth="75.0" text="Credit Hours" />
+                            <TableColumn prefWidth="400.0" text="Description" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>
@@ -87,34 +102,43 @@
                      <children>
                         <TableView prefHeight="200.0" prefWidth="903.0">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="C1" />
-                              <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn prefWidth="75.0" text="Department" />
+                            <TableColumn prefWidth="75.0" text="Number" />
+                            <TableColumn prefWidth="200.0" text="Name" />
+                            <TableColumn prefWidth="75.0" text="Credit Hours" />
+                            <TableColumn prefWidth="400.0" text="Description" />
                            </columns>
                         </TableView>
                      </children></AnchorPane>
                </content>
             </TitledPane>
-            <TitledPane fx:id="semester8" animated="false" layoutX="10.0" layoutY="164.0" prefHeight="22.0" prefWidth="828.0" text="Semester 7">
+            <TitledPane fx:id="semester7" animated="false" layoutX="10.0" layoutY="164.0" prefHeight="22.0" prefWidth="828.0" text="Semester 7">
                <content>
-                  <AnchorPane fx:id="semester8courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane fx:id="semester7courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <TableView prefHeight="200.0" prefWidth="901.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn prefWidth="75.0" text="Department" />
+                            <TableColumn prefWidth="75.0" text="Number" />
+                            <TableColumn prefWidth="200.0" text="Name" />
+                            <TableColumn prefWidth="75.0" text="Credit Hours" />
+                            <TableColumn prefWidth="400.0" text="Description" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>
                </content>
             </TitledPane>
-            <TitledPane fx:id="semester7" animated="false" layoutX="10.0" layoutY="304.0" text="Semester 8">
+            <TitledPane fx:id="semester8" animated="false" layoutX="10.0" layoutY="304.0" text="Semester 8">
                <content>
-                  <AnchorPane fx:id="semester7courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane fx:id="semester8courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <TableView prefHeight="200.0" prefWidth="200.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn prefWidth="75.0" text="Department" />
+                            <TableColumn prefWidth="75.0" text="Number" />
+                            <TableColumn prefWidth="200.0" text="Name" />
+                            <TableColumn prefWidth="75.0" text="Credit Hours" />
+                            <TableColumn prefWidth="400.0" text="Description" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>

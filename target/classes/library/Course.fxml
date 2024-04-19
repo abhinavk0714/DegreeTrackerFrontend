@@ -31,13 +31,13 @@
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7da" height="397.0" stroke="WHITE" strokeType="INSIDE" width="403.0" />
             <Label fx:id="lbl_courseNumber" contentDisplay="CENTER" layoutX="214.0" layoutY="63.0" text="Label" textAlignment="CENTER" />
-            <Label fx:id="lbl_creditHours" contentDisplay="CENTER" layoutX="69.0" layoutY="199.0" prefHeight="17.0" prefWidth="263.0" text="Label" textAlignment="CENTER" />
+            <Label fx:id="lbl_creditHours" contentDisplay="CENTER" layoutX="69.0" layoutY="199.0" prefHeight="17.0" prefWidth="263.0" text="Label" textAlignment="CENTER" wrapText="true" />
             <Label fx:id="lbl_description" contentDisplay="CENTER" layoutX="11.0" layoutY="88.0" prefHeight="101.0" prefWidth="376.0" text="Label" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" />
             <Label fx:id="lbl_department" contentDisplay="CENTER" layoutX="161.0" layoutY="63.0" text="Label" textAlignment="CENTER" />
-            <Label fx:id="lbl_courseName" contentDisplay="CENTER" layoutX="122.0" layoutY="38.0" prefHeight="17.0" prefWidth="158.0" text="Label" textAlignment="CENTER" />
-            <Label fx:id="lbl_prereq" contentDisplay="CENTER" layoutX="67.0" layoutY="251.0" prefHeight="17.0" prefWidth="252.0" text="Label" textAlignment="JUSTIFY" />
-            <Label fx:id="lbl_coreq" contentDisplay="CENTER" layoutX="67.0" layoutY="276.0" prefHeight="17.0" prefWidth="263.0" text="Label" textAlignment="CENTER" />
-            <Label fx:id="lbl_availability" contentDisplay="CENTER" layoutX="70.0" layoutY="226.0" prefHeight="17.0" prefWidth="263.0" text="Label" textAlignment="JUSTIFY" />
+            <Label fx:id="lbl_courseName" contentDisplay="CENTER" layoutX="122.0" layoutY="38.0" prefHeight="17.0" prefWidth="158.0" text="Label" textAlignment="CENTER" wrapText="true" />
+            <Label fx:id="lbl_prereq" contentDisplay="CENTER" layoutX="67.0" layoutY="251.0" prefHeight="17.0" prefWidth="252.0" text="Label" textAlignment="JUSTIFY" wrapText="true" />
+            <Label fx:id="lbl_coreq" contentDisplay="CENTER" layoutX="67.0" layoutY="276.0" prefHeight="17.0" prefWidth="263.0" text="Label" textAlignment="CENTER" wrapText="true" />
+            <Label fx:id="lbl_availability" contentDisplay="CENTER" layoutX="70.0" layoutY="226.0" prefHeight="17.0" prefWidth="263.0" text="Label" textAlignment="JUSTIFY" wrapText="true" />
          </children>
       </AnchorPane>
    </children>

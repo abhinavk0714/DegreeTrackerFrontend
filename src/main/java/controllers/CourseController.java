@@ -93,10 +93,17 @@ public class CourseController implements Initializable{
         String department = txt_department.getText();
         String number = txt_courseNumber.getText();
         
-       if(facade.validCourse(department,number)){
+        if(facade.validCourse(department,number)){
         course = facade.findCourse(department, number);
         if(course instanceof Course){
-            System.out.println(course.viewCourseDetails());
+            lbl_courseName.setText("Course Name: " + course.getName());
+            lbl_courseNumber.setText("Course Number: " + course.getNumber());
+            lbl_availability.setText("Availability: " + course.getAvailablity());
+            lbl_prereq.setText("Prerequesites: " + course.getPrerequisite());
+            lbl_coreq.setText("Corequesites: " + course.getCorequisite());
+            lbl_creditHours.setText("Credit Hours: " + course.getCreditHours());
+            lbl_department.setText("Department: " + course.getDepartment());
+            lbl_description.setText("Description: " + course.getDescription());
         }
         else{
             lbl_error.setText("Invalid Course");

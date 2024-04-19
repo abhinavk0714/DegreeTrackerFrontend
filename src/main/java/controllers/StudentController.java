@@ -10,6 +10,7 @@ import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -42,6 +43,9 @@ public class StudentController {
 
     @FXML
     private TextField courseSearchText;
+
+    @FXML
+    private Accordion eightSemesterPlan;
 
     @FXML
     private TitledPane semester1;
@@ -156,17 +160,19 @@ public class StudentController {
 
     @FXML
     void initialize() {
+        System.out.println("semester1Table: " + semester1Table);
+        System.out.println("semester2Table: " + semester2Table);
         this.userList = UserList.getInstance();
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
-        this.student = facade.findStudent("HTawnie");
+        this.student = facade.findStudent("BWest");
         studentAdvisorLabel.setText("Advisor: " + student.getAdvisor().getFirstName() + " " + student.getAdvisor().getLastName());
         studentClassificationLabel.setText("Classification: " + student.getClassification());
         studentFlagsLabel.setText("Flags: " + student.getFlag());
         studentGPALabel.setText("GPA: " + student.getOverallGPA());
         studentIDLabel.setText("ID: " + student.getUUID());
-        studentMajorLabel.setText("Major: " + student.getMajor());
+        studentMajorLabel.setText("Major: Computer Science");
         studentNameLabel.setText("Name: " + facade.getUser().getFirstName() + " " + facade.getUser().getLastName());
         EightSemesterPlan eightSemesterPlan = student.getEightSemesterPlan();
         if (eightSemesterPlan != null) {
@@ -180,10 +186,8 @@ public class StudentController {
             populateSemesterTable(semester8Table, eightSemesterPlan.getSemesters().get(7));
         }
     }
-    
-    private void populateSemesterTable(TableView<Course> table, ArrayList<Course> courses) {
-        TableView<Course> tableView = new TableView<>();
 
+    private void populateSemesterTable(TableView<Course> table, ArrayList<Course> courses) {
         TableColumn<Course, String> departmentColumn = new TableColumn<>("Department");
         departmentColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDepartment()));
 
@@ -199,7 +203,10 @@ public class StudentController {
         TableColumn<Course, String> descriptionColumn = new TableColumn<>("Description");
         departmentColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDescription()));
 
-        tableView.getColumns().addAll(departmentColumn, numberColumn, nameColumn, creditHoursColumn, descriptionColumn);
+        if (table.getColumns().isEmpty()) {
+            table.getColumns().addAll(departmentColumn, numberColumn, nameColumn, creditHoursColumn, descriptionColumn);
+        }
+        table.getItems().clear();
         table.getItems().addAll(courses);
     }
 

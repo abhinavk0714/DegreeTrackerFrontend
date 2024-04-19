@@ -17,13 +17,13 @@
 
 <AnchorPane prefHeight="578.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentController">
    <children>
-      <Accordion layoutX="23.0" layoutY="313.0" prefHeight="207.0" prefWidth="903.0">
+      <Accordion fx:id="eightSemesterPlan" layoutX="23.0" layoutY="113.0" prefHeight="407.0" prefWidth="881.0">
          <panes>
             <TitledPane fx:id="semester1" animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="6.0" prefWidth="828.0" text="Semester 1">
                <content>
-                  <AnchorPane fx:id="semester1courses" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="901.0">
+                  <AnchorPane fx:id="semester1courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="903.0">
                      <children>
-                        <TableView prefHeight="200.0" prefWidth="903.0">
+                        <TableView fx:id="semester1Table" prefHeight="200.0" prefWidth="880.0">
                           <columns>
                             <TableColumn prefWidth="75.0" text="Department" />
                             <TableColumn prefWidth="75.0" text="Number" />
@@ -37,9 +37,9 @@
             </TitledPane>
             <TitledPane fx:id="semester2" animated="false" text="Semester 2">
                <content>
-                  <AnchorPane fx:id="semester2courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane fx:id="semester2courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="903.0">
                      <children>
-                        <TableView prefHeight="200.0" prefWidth="903.0">
+                        <TableView fx:id="semester2Table" prefHeight="200.0" prefWidth="880.0">
                           <columns>
                             <TableColumn prefWidth="75.0" text="Department" />
                             <TableColumn prefWidth="75.0" text="Number" />
@@ -53,9 +53,9 @@
             </TitledPane>
             <TitledPane fx:id="semester3" animated="false" text="Semester 3">
                <content>
-                  <AnchorPane fx:id="semester3courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane fx:id="semester3courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="903.0">
                      <children>
-                        <TableView prefHeight="200.0" prefWidth="903.0">
+                        <TableView fx:id="semester3Table" prefHeight="200.0" prefWidth="880.0">
                           <columns>
                             <TableColumn prefWidth="75.0" text="Department" />
                             <TableColumn prefWidth="75.0" text="Number" />
@@ -69,9 +69,9 @@
             </TitledPane>
             <TitledPane fx:id="semester4" animated="false" layoutX="10.0" layoutY="61.0" text="Semester 4">
                <content>
-                  <AnchorPane fx:id="semester4courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane fx:id="semester4courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="903.0">
                      <children>
-                        <TableView prefHeight="200.0" prefWidth="903.0">
+                        <TableView fx:id="semester4Table" prefHeight="200.0" prefWidth="880.0">
                           <columns>
                             <TableColumn prefWidth="75.0" text="Department" />
                             <TableColumn prefWidth="75.0" text="Number" />
@@ -85,9 +85,9 @@
             </TitledPane>
             <TitledPane fx:id="semester5" animated="false" layoutX="10.0" layoutY="87.0" text="Semester 5">
                <content>
-                  <AnchorPane fx:id="semester5courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane fx:id="semester5courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="903.0">
                      <children>
-                        <TableView prefHeight="200.0" prefWidth="903.0">
+                        <TableView fx:id="semester5Table" prefHeight="200.0" prefWidth="880.0">
                           <columns>
                             <TableColumn prefWidth="75.0" text="Department" />
                             <TableColumn prefWidth="75.0" text="Number" />
@@ -99,11 +99,11 @@
                      </children></AnchorPane>
                </content>
             </TitledPane>
-            <TitledPane fx:id="semester6" animated="false" layoutX="10.0" layoutY="304.0" prefHeight="61.0" prefWidth="842.0" text="Semester 6">
+            <TitledPane fx:id="semester6" animated="false" layoutX="10.0" layoutY="304.0" text="Semester 6">
                <content>
-                  <AnchorPane fx:id="semester6courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane fx:id="semester6courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="903.0">
                      <children>
-                        <TableView prefHeight="200.0" prefWidth="903.0">
+                        <TableView fx:id="semester6Table" prefHeight="200.0" prefWidth="880.0">
                            <columns>
                             <TableColumn prefWidth="75.0" text="Department" />
                             <TableColumn prefWidth="75.0" text="Number" />
@@ -115,11 +115,11 @@
                      </children></AnchorPane>
                </content>
             </TitledPane>
-            <TitledPane fx:id="semester7" animated="false" layoutX="10.0" layoutY="164.0" prefHeight="22.0" prefWidth="828.0" text="Semester 7">
+            <TitledPane fx:id="semester7" animated="false" layoutX="10.0" layoutY="164.0" text="Semester 7">
                <content>
-                  <AnchorPane fx:id="semester7courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane fx:id="semester7courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="903.0">
                      <children>
-                        <TableView prefHeight="200.0" prefWidth="901.0">
+                        <TableView fx:id="semester7Table" prefHeight="200.0" prefWidth="880.0">
                           <columns>
                             <TableColumn prefWidth="75.0" text="Department" />
                             <TableColumn prefWidth="75.0" text="Number" />
@@ -133,9 +133,9 @@
             </TitledPane>
             <TitledPane fx:id="semester8" animated="false" layoutX="10.0" layoutY="304.0" text="Semester 8">
                <content>
-                  <AnchorPane fx:id="semester8courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <AnchorPane fx:id="semester8courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="903.0">
                      <children>
-                        <TableView prefHeight="200.0" prefWidth="200.0">
+                        <TableView fx:id="semester8Table" prefHeight="200.0" prefWidth="880.0">
                           <columns>
                             <TableColumn prefWidth="75.0" text="Department" />
                             <TableColumn prefWidth="75.0" text="Number" />

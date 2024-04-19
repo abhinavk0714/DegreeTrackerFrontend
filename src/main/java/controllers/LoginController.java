@@ -103,10 +103,10 @@ public class LoginController implements Initializable {
             if (currentUser instanceof Advisor) {
                 switchToAdvisorView(event);
             } else {
-                System.out.println("The user is not an advisor.");
+                message.setText("The user is not an advisor.");
             }
         } else {
-            System.out.println("Login failed.");
+            message.setText("Invalid login credentials");
         }
     }
     

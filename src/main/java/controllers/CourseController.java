@@ -102,8 +102,8 @@ public class CourseController implements Initializable{
             lbl_prereq.setText("Prerequesites: " + course.getPrerequisite());
             lbl_coreq.setText("Corequesites: " + course.getCorequisite());
             lbl_creditHours.setText("Credit Hours: " + course.getCreditHours());
-            lbl_department.setText("Department: " + course.getDepartment());
-            lbl_description.setText("Description: " + course.getDescription());
+            lbl_department.setText(course.getDepartment());
+            lbl_description.setText(course.getDescription());
         }
         else {
             lbl_error.setText("Invalid Course");

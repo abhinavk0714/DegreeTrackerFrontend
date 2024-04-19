@@ -96,8 +96,8 @@ public class CourseController implements Initializable{
         if(facade.validCourse(department,number)){
         course = facade.findCourse(department, number);
         if(course instanceof Course){
-            lbl_courseName.setText("Course Name: " + course.getName());
-            lbl_courseNumber.setText("Course Number: " + course.getNumber());
+            lbl_courseName.setText(course.getName());
+            lbl_courseNumber.setText(course.getNumber());
             lbl_availability.setText("Availability: " + course.getAvailablity());
             lbl_prereq.setText("Prerequesites: " + course.getPrerequisite());
             lbl_coreq.setText("Corequesites: " + course.getCorequisite());
@@ -105,9 +105,8 @@ public class CourseController implements Initializable{
             lbl_department.setText("Department: " + course.getDepartment());
             lbl_description.setText("Description: " + course.getDescription());
         }
-        else{
+        else {
             lbl_error.setText("Invalid Course");
-            return;
         }
        }
        else{

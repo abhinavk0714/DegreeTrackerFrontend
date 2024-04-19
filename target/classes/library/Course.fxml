@@ -26,7 +26,6 @@
       <TextField fx:id="txt_courseNumber" layoutX="206.0" layoutY="256.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Course Number" />
       <Button fx:id="searchButton" layoutX="253.0" layoutY="304.0" mnemonicParsing="false" onAction="#courseSearch" text="Search" />
       <Text fill="WHITE" layoutX="292.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2024 Team Salt - University of South Carolina" />
-      <Label fx:id="lbl_error" layoutX="266.0" layoutY="342.0" text="Label" />
       <AnchorPane layoutX="415.0" layoutY="90.0" prefHeight="397.0" prefWidth="403.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7da" height="397.0" stroke="WHITE" strokeType="INSIDE" width="403.0" />
@@ -37,8 +36,9 @@
             <Label fx:id="lbl_courseName" alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="35.0" prefHeight="17.0" prefWidth="240.0" textAlignment="CENTER" wrapText="true" />
             <Label fx:id="lbl_prereq" alignment="CENTER" contentDisplay="CENTER" layoutX="76.0" layoutY="251.0" prefHeight="17.0" prefWidth="252.0" textAlignment="CENTER" wrapText="true" />
             <Label fx:id="lbl_coreq" alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="276.0" prefHeight="17.0" prefWidth="263.0" textAlignment="CENTER" wrapText="true" />
-            <Label fx:id="lbl_availability" alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="226.0" prefHeight="17.0" prefWidth="263.0" textAlignment="JUSTIFY" wrapText="true" />
+            <Label fx:id="lbl_availability" alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="226.0" prefHeight="17.0" prefWidth="263.0" textAlignment="CENTER" wrapText="true" />
          </children>
       </AnchorPane>
+      <Label fx:id="lbl_error" alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" layoutY="344.0" prefHeight="17.0" prefWidth="116.0" text="Label" textAlignment="CENTER" wrapText="true" />
    </children>
 </AnchorPane>

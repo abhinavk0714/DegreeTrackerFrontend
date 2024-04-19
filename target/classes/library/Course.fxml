@@ -39,6 +39,6 @@
             <Label fx:id="lbl_availability" alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="226.0" prefHeight="17.0" prefWidth="263.0" textAlignment="CENTER" wrapText="true" />
          </children>
       </AnchorPane>
-      <Label fx:id="lbl_error" alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" layoutY="344.0" prefHeight="17.0" prefWidth="116.0" text="Label" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="error" alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" layoutY="344.0" prefHeight="17.0" prefWidth="116.0" text="Label" textAlignment="CENTER" wrapText="true" />
    </children>
 </AnchorPane>

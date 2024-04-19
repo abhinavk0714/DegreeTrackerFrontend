@@ -30,14 +30,14 @@
       <AnchorPane layoutX="415.0" layoutY="90.0" prefHeight="397.0" prefWidth="403.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7da" height="397.0" stroke="WHITE" strokeType="INSIDE" width="403.0" />
-            <Label fx:id="lbl_courseNumber" alignment="CENTER" layoutX="214.0" layoutY="63.0" text="Label" />
-            <Label fx:id="lbl_creditHours" alignment="CENTER" layoutX="187.0" layoutY="199.0" text="Label" />
-            <Label fx:id="lbl_description" alignment="CENTER" layoutX="11.0" layoutY="88.0" prefHeight="101.0" prefWidth="376.0" text="Label" textOverrun="CENTER_WORD_ELLIPSIS" />
-            <Label fx:id="lbl_department" alignment="CENTER" layoutX="161.0" layoutY="63.0" text="Label" />
-            <Label fx:id="lbl_courseName" alignment="CENTER" layoutX="184.0" layoutY="38.0" text="Label" />
-            <Label fx:id="lbl_prereq" alignment="CENTER" layoutX="187.0" layoutY="251.0" text="Label" />
-            <Label fx:id="lbl_coreq" alignment="CENTER" layoutX="187.0" layoutY="276.0" text="Label" />
-            <Label fx:id="lbl_availability" alignment="CENTER" layoutX="187.0" layoutY="226.0" text="Label" />
+            <Label fx:id="lbl_courseNumber" contentDisplay="CENTER" layoutX="214.0" layoutY="63.0" text="Label" />
+            <Label fx:id="lbl_creditHours" contentDisplay="CENTER" layoutX="187.0" layoutY="199.0" text="Label" />
+            <Label fx:id="lbl_description" contentDisplay="CENTER" layoutX="11.0" layoutY="88.0" prefHeight="101.0" prefWidth="376.0" text="Label" textOverrun="CENTER_WORD_ELLIPSIS" />
+            <Label fx:id="lbl_department" contentDisplay="CENTER" layoutX="161.0" layoutY="63.0" text="Label" />
+            <Label fx:id="lbl_courseName" contentDisplay="CENTER" layoutX="184.0" layoutY="38.0" text="Label" />
+            <Label fx:id="lbl_prereq" contentDisplay="CENTER" layoutX="187.0" layoutY="251.0" text="Label" />
+            <Label fx:id="lbl_coreq" contentDisplay="CENTER" layoutX="187.0" layoutY="276.0" text="Label" />
+            <Label fx:id="lbl_availability" contentDisplay="CENTER" layoutX="187.0" layoutY="226.0" text="Label" />
          </children>
       </AnchorPane>
    </children>

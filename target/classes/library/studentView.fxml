@@ -26,7 +26,7 @@
          </image>
       </ImageView>
       <Button fx:id="LObutton" layoutX="25.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToLogin" text="Log Out" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7da" height="218.0" layoutX="14.0" layoutY="82.0" stroke="WHITE" strokeType="INSIDE" width="553.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7da" height="218.0" layoutX="14.0" layoutY="82.0" stroke="WHITE" strokeType="INSIDE" width="453.0" />
       <TextField fx:id="courseSearchText" layoutX="766.0" layoutY="89.0" promptText="Course Search" />
       <Button fx:id="courseSearchButton" layoutX="721.0" layoutY="89.0" mnemonicParsing="false" onAction="#switchToCourseView" text="🔍" />
       <Text fill="WHITE" layoutX="423.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Privacy" />
@@ -39,7 +39,7 @@
       </ImageView>
       <Text fill="WHITE" layoutX="340.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2024 Team Salt - University of South Carolina" />
       <Label fx:id="studentNameLabel" layoutX="198.0" layoutY="103.0" prefHeight="25.0" prefWidth="179.0" text="Label" />
-      <Label fx:id="studentIDLabel" layoutX="198.0" layoutY="128.0" prefHeight="25.0" prefWidth="357.0" text="Label" />
+      <Label fx:id="studentIDLabel" layoutX="198.0" layoutY="128.0" prefHeight="25.0" prefWidth="179.0" text="Label" />
       <Label fx:id="studentClassificationLabel" layoutX="198.0" layoutY="153.0" prefHeight="25.0" prefWidth="179.0" text="Label" />
       <Label fx:id="studentMajorLabel" layoutX="198.0" layoutY="178.0" prefHeight="25.0" prefWidth="179.0" text="Label" />
       <Label fx:id="studentAdvisorLabel" layoutX="198.0" layoutY="203.0" prefHeight="25.0" prefWidth="179.0" text="Label" />

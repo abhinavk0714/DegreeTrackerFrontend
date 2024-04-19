@@ -94,23 +94,20 @@ public class CourseController implements Initializable{
         String number = txt_courseNumber.getText();
         
         if(facade.validCourse(department,number)){
-        course = facade.findCourse(department, number);
-        if(course instanceof Course){
-            lbl_courseName.setText(course.getName());
-            lbl_courseNumber.setText(course.getNumber());
-            lbl_availability.setText("Availability: " + course.getAvailablity());
-            lbl_prereq.setText("Prerequesites: " + course.getPrerequisite());
-            lbl_coreq.setText("Corequesites: " + course.getCorequisite());
-            lbl_creditHours.setText("Credit Hours: " + course.getCreditHours());
-            lbl_department.setText(course.getDepartment());
-            lbl_description.setText(course.getDescription());
+            course = facade.findCourse(department, number);
+            if(course instanceof Course){
+                lbl_courseName.setText(course.getName());
+                lbl_courseNumber.setText(course.getNumber());
+                lbl_availability.setText("Availability: " + course.getAvailablity());
+                lbl_prereq.setText("Prerequesites: " + course.getPrerequisite());
+                lbl_coreq.setText("Corequesites: " + course.getCorequisite());
+                lbl_creditHours.setText("Credit Hours: " + course.getCreditHours());
+                lbl_department.setText(course.getDepartment());
+                lbl_description.setText(course.getDescription());
+            }
         }
-        else {
-            lbl_error.setText("Invalid Course");
-        }
-       }
-       else{
-        System.out.println("Invalid Course");
+        else{
+        lbl_error.setText("Invalid Course");
        }
     }
 }

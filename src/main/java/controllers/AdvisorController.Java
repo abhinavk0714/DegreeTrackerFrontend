@@ -83,16 +83,29 @@ public class AdvisorController implements Initializable {
         }
     }
 
-    @FXML
-    void searchForStudent(ActionEvent event){
-        String searchedStudent = studentSearchText.getText();        
-        if(facade.findStudent(searchedStudent) != null){
-            switchToStudentView(event);
+    void searchForStudent(ActionEvent event) {
+        String searchedStudent = studentSearchText.getText();
+        Student tempStudent;
+    
+        // Split the searchedStudent string into first name and last name
+        String[] names = searchedStudent.split(" ");
+        if (names.length >= 2) {
+            String firstName = names[0];
+            String lastName = names[1];
+    
+            // Using the first and last names to find the student
+            tempStudent = facade.findStudentbyName(firstName, lastName);
+    
+            if (tempStudent != null) {
+                // Student found, you can handle the student object here
+                System.out.println("Student found: " + tempStudent.toString());
+            } else {
+                System.out.println("This is not a valid student");
+            }
         } else {
-            studentSearchMessage.setText("This is not a valid student");
+            System.out.println("Please enter both a first and a last name");
         }
     }
-
-
+    
 }
 

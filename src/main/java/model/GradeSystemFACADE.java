@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.UUID;
 
 public class GradeSystemFACADE {
@@ -48,6 +50,8 @@ public class GradeSystemFACADE {
     public Course findCourse(String department, String number) {
         return courseList.getCourseByNumber(department, number);
     }
+
+    
     /**
      * This method is to check if the user's entered course for course search is valid
      * @param department the user's entered department
@@ -191,6 +195,19 @@ public class GradeSystemFACADE {
     {
         return userList.addAdvisor(new Advisor(UUID.randomUUID(), fn, ln, userName, password, null));
         //userList.saveAdvisors();
+    }
+
+    public ArrayList<String> formatPrerequisites(HashMap<UUID,String> pre)
+    {
+        ArrayList<String> prerequitistes = new ArrayList<String>();
+        Iterator it = pre.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            Course course = courseList.getCourseByID((UUID) pair.getKey());
+            prerequitistes.add(course.getDepartment() + " " + course.getNumber() + ", Grade: " + pair.getValue());
+            it.remove(); 
+        }
+        return prerequitistes;
     }
 
     public static void main(String[] args) {

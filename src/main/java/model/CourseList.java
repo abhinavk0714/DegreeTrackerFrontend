@@ -44,12 +44,7 @@ public class CourseList {
         return null;
     }
 
-    /**
-     * This method is to be able to search for a class in the list of available classses
-     * @param department the department of the course to be searched the CSCE in CSCE 247
-     * @param number the number of the ourse to be searched the 247 in CSCE 247
-     * @return the course that matches the department and number being search or returns null if class is not found
-     */
+    
     public Course getCourseByID(UUID id) {
         for (Course course : listOfCourses.values()) {
             if (course.getId() == id) {

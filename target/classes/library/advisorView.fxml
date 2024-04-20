@@ -20,7 +20,6 @@
             <Image url="@../images/usc-logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="backButton" layoutX="26.0" layoutY="23.0" mnemonicParsing="false" onAction="#backToLogin" text="Back" />
       <Button fx:id="LObutton" layoutX="26.0" layoutY="23.0" mnemonicParsing="false" onAction="#backToLogin" text="Log Out" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7da" height="330.0" layoutX="26.0" layoutY="178.0" stroke="WHITE" strokeType="INSIDE" width="504.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7da" height="330.0" layoutX="581.0" layoutY="178.0" stroke="WHITE" strokeType="INSIDE" width="259.0" />
@@ -33,64 +32,107 @@
             <Font name="SansSerif Bold" size="35.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="554.0" layoutY="178.0" prefHeight="330.0" prefWidth="280.0">
+      <AnchorPane layoutX="575.0" layoutY="178.0" prefHeight="335.0" prefWidth="259.0">
          <children>
-            <Label alignment="TOP_LEFT" layoutY="33.0" prefHeight="302.0" prefWidth="280.0" text="student risk info goes here" />
-            <Text layoutX="60.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Students at Risk:" wrappingWidth="146.21630859375">
+            <Label alignment="TOP_LEFT" layoutX="18.0" layoutY="36.0" prefHeight="44.0" prefWidth="236.0" text="- Brax West: needs to schedule an advising appointment for FALL 2024 " wrapText="true" />
+            <Text layoutX="49.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Information:" wrappingWidth="174.21630859375">
                <font>
                   <Font name="Times New Roman" size="20.0" />
                </font>
             </Text>
+            <Label layoutX="18.0" layoutY="80.0" prefHeight="69.0" prefWidth="236.0" text="- Walter White: has course(s) which have a deadline for completion and/or affect graduation" wrapText="true" />
+            <Label layoutX="18.0" layoutY="149.0" prefHeight="44.0" prefWidth="236.0" text="- Miranda Cooper: is at risk of failing MATH 141 " wrapText="true" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="26.0" layoutY="178.0" prefHeight="335.0" prefWidth="504.0">
+      <AnchorPane layoutX="26.0" layoutY="178.0" prefHeight="335.0" prefWidth="519.0">
          <children>
             <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="6.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/student2.jpeg" />
                </image>
             </ImageView>
-            <Label layoutX="113.0" layoutY="38.0" prefHeight="22.0" prefWidth="103.0" text="Label">
+            <Label layoutX="113.0" layoutY="38.0" prefHeight="22.0" prefWidth="103.0" text="Brax West">
                <font>
                   <Font name="Times New Roman" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="113.0" layoutY="88.0" prefHeight="22.0" prefWidth="103.0" text="Label">
+            <Label layoutX="113.0" layoutY="94.0" prefHeight="22.0" prefWidth="103.0" text="SOPHOMORE">
                <font>
                   <Font name="Times New Roman" size="15.0" />
                </font>
             </Label>
-            <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="6.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="braxWestImage" fitHeight="110.0" fitWidth="100.0" layoutX="6.0" layoutY="38.0" onMouseClicked="#switchToStudentViewFromImage" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/braxwest.png" />
                </image>
             </ImageView>
-            <Label layoutX="113.0" layoutY="116.0" prefHeight="22.0" prefWidth="103.0" text="Label">
+            <Label layoutX="113.0" layoutY="116.0" prefHeight="22.0" prefWidth="113.0" text="Computer Science">
                <font>
                   <Font name="Times New Roman" size="15.0" />
                </font>
             </Label>
-            <Text layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Students:" wrappingWidth="127.0">
+            <Text layoutX="6.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Students:" wrappingWidth="127.0">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Text>
-            <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="233.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="252.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/student3.jpeg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="233.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="252.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/student4.jpeg" />
                </image>
             </ImageView>
-            <Label layoutX="113.0" layoutY="178.0" prefHeight="22.0" prefWidth="103.0" text="Label">
+            <Label layoutX="113.0" layoutY="178.0" prefHeight="22.0" prefWidth="103.0" text="Miranda Cooper">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="113.0" layoutY="228.0" prefHeight="22.0" prefWidth="103.0" text="FRESHMAN">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="113.0" layoutY="250.0" prefHeight="22.0" prefWidth="113.0" text="Computer Science">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="360.0" layoutY="38.0" prefHeight="22.0" prefWidth="103.0" text="Jimmy Smith">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="360.0" layoutY="94.0" prefHeight="22.0" prefWidth="103.0" text="FRESHMAN">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="360.0" layoutY="116.0" prefHeight="22.0" prefWidth="113.0" text="Computer Science">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="360.0" layoutY="178.0" prefHeight="22.0" prefWidth="103.0" text="Walter White">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="360.0" layoutY="228.0" prefHeight="22.0" prefWidth="103.0" text="JUNIOR">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="360.0" layoutY="248.0" prefHeight="26.0" prefWidth="113.0" text="Computer Science" wrapText="true">
                <font>
                   <Font name="Times New Roman" size="15.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
+      <Text fx:id="studentSearchMessage" layoutX="680.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="174.21630859375" />
    </children>
 </AnchorPane>

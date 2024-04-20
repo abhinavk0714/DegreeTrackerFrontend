@@ -1,18 +1,18 @@
 package model;
 
 /**
- * The class for the completed courses a student has taken and the class is able to hold the class information along 
- * with the grade that the student had recieved in the course
- */
+* The class for the completed courses a student has taken and the class is able to hold the class information along 
+* with the grade that the student had recieved in the course
+*/
 public class CompletedCourse extends Course {
     private Grade letterGrade;
     private double qualityPoints;
     
     /**
-     * The constructor for the completed course
-     * @param course the course that the student completed
-     * @param letterGrade the letter grade the student recieved in the course
-     */
+    * The constructor for the completed course
+    * @param course the course that the student completed
+    * @param letterGrade the letter grade the student recieved in the course
+    */
     public CompletedCourse(Course course, Grade letterGrade) {
         super(course.getId(),course.getName(),course.getDepartment(),course.getNumber(),course.getDescription(),
         course.getCreditHours(),course.getAvailablity(),course.getPrerequisite(),course.getCorequisite());
@@ -22,47 +22,52 @@ public class CompletedCourse extends Course {
     
     /**
     * helper method for quality points based on the USC GPA scale
-     * @return the double that represents the amount of quailty points based on grade recieved
+    * @return the double that represents the amount of quailty points based on grade recieved
     */
     private double setQualityPoints(Course course, Grade grade) {
         double points = 0;
         if (grade.equals(Grade.A))
-            points = 4;
+        points = 4;
         else if (grade.equals(Grade.B_PLUS))
-            points = 3.5;
+        points = 3.5;
         else if (grade.equals(Grade.B))
-            points = 3;
+        points = 3;
         else if (grade.equals(Grade.C_PLUS))
-            points = 2.5;
+        points = 2.5;
         else if (grade.equals(Grade.C))
-            points = 2;
+        points = 2;
         else if (grade.equals(Grade.D_PLUS))
-            points = 1.5;
+        points = 1.5;
         else if (grade.equals(Grade.D))
-            points = 1;
+        points = 1;
         else
-            points = 0;
+        points = 0;
         
         return points * course.getCreditHours();
     }
-
+    
     /**
-     * getter for quality points
-     * @return the double that represents the quality points for the course
-     */
+    * getter for quality points
+    * @return the double that represents the quality points for the course
+    */
     public double getqualityPoints()
     {
         return this.qualityPoints;
     }
-
+    
     /**
-     * the getter for the letter grade
-     * @return the grade that the student recieved in the course
-     */
+    * the getter for the letter grade
+    * @return the grade that the student recieved in the course
+    */
     public Grade getLetterGrade()
     {
         return this.letterGrade;
     }
-
-
+    
+    @Override
+    public String toString() {
+        return super.smallCourseView() + " | Grade: " + letterGrade;
+    }
+    
+    
 }

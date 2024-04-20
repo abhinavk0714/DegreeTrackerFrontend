@@ -4,21 +4,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-import java.util.stream.Collectors;
 
-import javafx.beans.property.SimpleLongProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TitledPane;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import library.App;
 import model.*;
 
@@ -49,81 +42,6 @@ public class StudentController {
     private TextField courseSearchText;
     
     @FXML
-    private Accordion eightSemesterPlan;
-    
-    @FXML
-    private TitledPane semester1;
-    
-    @FXML
-    private AnchorPane semester1courses;
-    
-    @FXML
-    private TitledPane semester2;
-    
-    @FXML
-    private AnchorPane semester2courses;
-    
-    @FXML
-    private TitledPane semester3;
-    
-    @FXML
-    private AnchorPane semester3courses;
-    
-    @FXML
-    private TitledPane semester4;
-    
-    @FXML
-    private AnchorPane semester4courses;
-    
-    @FXML
-    private TitledPane semester5;
-    
-    @FXML
-    private AnchorPane semester5courses;
-    
-    @FXML
-    private TitledPane semester6;
-    
-    @FXML
-    private AnchorPane semester6courses;
-    
-    @FXML
-    private TitledPane semester7;
-    
-    @FXML
-    private AnchorPane semester7courses;
-    
-    @FXML
-    private TitledPane semester8;
-    
-    @FXML
-    private AnchorPane semester8courses;
-    
-    @FXML
-    private TableView<Course> semester1Table;
-    
-    @FXML
-    private TableView<Course> semester2Table;
-    
-    @FXML
-    private TableView<Course> semester3Table;
-    
-    @FXML
-    private TableView<Course> semester4Table;
-    
-    @FXML
-    private TableView<Course> semester5Table;
-    
-    @FXML
-    private TableView<Course> semester6Table;
-    
-    @FXML
-    private TableView<Course> semester7Table;
-    
-    @FXML
-    private TableView<Course> semester8Table;
-    
-    @FXML
     private Label studentAdvisorLabel;
     
     @FXML
@@ -143,6 +61,12 @@ public class StudentController {
     
     @FXML
     private Label studentNameLabel;
+    
+    @FXML
+    private Text eightSemesterPlanText;
+    
+    @FXML
+    private Text completedCoursesText;
     
     @FXML
     void switchToCourseView(ActionEvent event) {
@@ -177,42 +101,28 @@ public class StudentController {
         studentIDLabel.setText("ID: " + student.getUUID());
         studentMajorLabel.setText("Major: Computer Science");
         studentNameLabel.setText("Name: " + facade.getUser().getFirstName() + " " + facade.getUser().getLastName());
+        
+        displayEightSemesterPlan();
+        displayCompletedCourses();
+    }
+    
+    private void displayEightSemesterPlan() {
         EightSemesterPlan eightSemesterPlan = student.getEightSemesterPlan();
         if (eightSemesterPlan != null) {
-            populateSemesterTable(semester1Table, eightSemesterPlan.getSemesters().get(0));
-            populateSemesterTable(semester2Table, eightSemesterPlan.getSemesters().get(1));
-            populateSemesterTable(semester3Table, eightSemesterPlan.getSemesters().get(2));
-            populateSemesterTable(semester4Table, eightSemesterPlan.getSemesters().get(3));
-            populateSemesterTable(semester5Table, eightSemesterPlan.getSemesters().get(4));
-            populateSemesterTable(semester6Table, eightSemesterPlan.getSemesters().get(5));
-            populateSemesterTable(semester7Table, eightSemesterPlan.getSemesters().get(6));
-            populateSemesterTable(semester8Table, eightSemesterPlan.getSemesters().get(7));
+            eightSemesterPlanText.setText(eightSemesterPlan.toString());
+        } else {
+            eightSemesterPlanText.setText("No eight-semester plan available.");
         }
     }
     
-    private void populateSemesterTable(TableView<Course> table, ArrayList<Course> courses) {
-        System.out.println("Populating table with courses: " + courses);
-        
-        if (table.getColumns().isEmpty()) {
-            TableColumn<Course, String> departmentColumn = new TableColumn<>("Department");
-            departmentColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDepartment()));
-            
-            TableColumn<Course, String> numberColumn = new TableColumn<>("Number");
-            numberColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNumber()));
-            
-            TableColumn<Course, String> nameColumn = new TableColumn<>("Name");
-            nameColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getName()));
-            
-            TableColumn<Course, Long> creditHoursColumn = new TableColumn<>("Credit Hours");
-            creditHoursColumn.setCellValueFactory(data -> new SimpleLongProperty(data.getValue().getCreditHours()).asObject());
-            
-            TableColumn<Course, String> descriptionColumn = new TableColumn<>("Description");
-            descriptionColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDescription()));
-            
-            table.getColumns().addAll(departmentColumn, numberColumn, nameColumn, creditHoursColumn, descriptionColumn);
+    private void displayCompletedCourses() {
+        ArrayList<CompletedCourse> completedCourses = student.getCompletedCourses();
+        StringBuilder completedCoursesString = new StringBuilder();
+        completedCoursesString.append("Completed Courses:\n");
+        for (CompletedCourse completedCourse : completedCourses) {
+            completedCoursesString.append(completedCourse.toString()).append("\n");
         }
-        table.getItems().clear();
-        table.getItems().addAll(courses);
+        completedCoursesText.setText(completedCoursesString.toString());
     }
     
 }

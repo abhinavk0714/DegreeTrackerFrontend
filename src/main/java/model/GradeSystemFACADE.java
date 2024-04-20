@@ -133,6 +133,9 @@ public class GradeSystemFACADE {
         return UserList.getInstance().findStudentById(studentID);
     }
     
+    public Student findStudentbyName(String firstname, String lastname) {
+        return UserList.getInstance().findStudentByName(firstname, lastname);
+    }
     // use view student details with the student being tawnie hill instead of brax west
     
     public EightSemesterPlan viewStudentsEightSemesterPlan(Student student) {

@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -11,7 +12,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -26,9 +26,9 @@
          </image>
       </ImageView>
       <Button fx:id="LObutton" layoutX="25.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToLogin" text="Log Out" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7da" height="218.0" layoutX="14.0" layoutY="82.0" stroke="WHITE" strokeType="INSIDE" width="453.0" />
-      <TextField fx:id="courseSearchText" layoutX="766.0" layoutY="89.0" promptText="Course Search" />
-      <Button fx:id="courseSearchButton" layoutX="721.0" layoutY="89.0" mnemonicParsing="false" onAction="#switchToCourseView" text="🔍" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7da" height="218.0" layoutX="14.0" layoutY="82.0" stroke="WHITE" strokeType="INSIDE" width="668.0" />
+      <TextField fx:id="courseSearchText" layoutX="530.0" layoutY="103.0" prefHeight="26.0" prefWidth="146.0" promptText="Course Search" />
+      <Button fx:id="courseSearchButton" layoutX="489.0" layoutY="103.0" mnemonicParsing="false" onAction="#switchToCourseView" text="🔍" />
       <Text fill="WHITE" layoutX="423.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Privacy" />
       <Text fill="WHITE" layoutX="358.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help" />
       <Text fill="WHITE" layoutX="495.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terms" />
@@ -39,22 +39,12 @@
       </ImageView>
       <Text fill="WHITE" layoutX="340.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2024 Team Salt - University of South Carolina" />
       <Label fx:id="studentNameLabel" layoutX="198.0" layoutY="103.0" prefHeight="25.0" prefWidth="179.0" text="Label" />
-      <Label fx:id="studentIDLabel" layoutX="198.0" layoutY="128.0" prefHeight="25.0" prefWidth="179.0" text="Label" />
+      <Label fx:id="studentIDLabel" layoutX="198.0" layoutY="128.0" prefHeight="25.0" prefWidth="267.0" text="Label" />
       <Label fx:id="studentClassificationLabel" layoutX="198.0" layoutY="153.0" prefHeight="25.0" prefWidth="179.0" text="Label" />
       <Label fx:id="studentMajorLabel" layoutX="198.0" layoutY="178.0" prefHeight="25.0" prefWidth="179.0" text="Label" />
       <Label fx:id="studentAdvisorLabel" layoutX="198.0" layoutY="203.0" prefHeight="25.0" prefWidth="179.0" text="Label" />
       <Label fx:id="studentGPALabel" layoutX="198.0" layoutY="228.0" prefHeight="25.0" prefWidth="179.0" text="Label" />
       <Label fx:id="studentFlagsLabel" layoutX="198.0" layoutY="251.0" prefHeight="25.0" prefWidth="179.0" text="Label" />
-      <VBox fx:id="advisorNotesVBox" alignment="TOP_CENTER" layoutX="731.0" layoutY="133.0" prefHeight="166.0" prefWidth="195.0">
-         <children>
-            <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Advisor Notes: " underline="true">
-               <font>
-                  <Font name="Times New Roman" size="16.0" />
-               </font>
-            </Text>
-            <Label prefHeight="154.0" prefWidth="202.0" text="advisor notes go here" wrapText="true" />
-         </children>
-      </VBox>
       <ScrollPane layoutX="15.0" layoutY="308.0" prefHeight="208.0" prefWidth="917.0">
          <content>
             <Accordion fx:id="eightSemesterPlan" prefHeight="208.0" prefWidth="881.0">
@@ -93,7 +83,7 @@
                         </AnchorPane>
                      </content>
                   </TitledPane>
-                  <TitledPane fx:id="semester3" animated="false" prefHeight="0.0" prefWidth="881.0" text="Semester 3">
+                  <TitledPane fx:id="semester3" animated="false" prefHeight="212.0" prefWidth="881.0" text="Semester 3">
                      <content>
                         <AnchorPane fx:id="semester3courses" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="903.0">
                            <children>
@@ -199,5 +189,17 @@
             </Accordion>
          </content>
       </ScrollPane>
+      <AnchorPane layoutX="716.0" layoutY="82.0" prefHeight="208.0" prefWidth="216.0">
+         <children>
+            <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="38.0" prefHeight="100.0" prefWidth="202.0" text="- Need to schedule advising appointment" wrapText="true" />
+            <Text fontSmoothingType="LCD" layoutX="50.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Advisor Notes: " underline="true">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ProgressBar fx:id="degreeProgressBar" layoutX="489.0" layoutY="231.0" prefHeight="20.0" prefWidth="187.0" progress="0.504" />
+      <Text layoutX="489.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Degree Progress :" wrappingWidth="145.9999999999999" />
    </children>
 </AnchorPane>

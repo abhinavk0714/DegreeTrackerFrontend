@@ -94,8 +94,8 @@ public class CourseController implements Initializable{
     void courseSearch(ActionEvent event) {
         String department = txt_department.getText();
         String number = txt_courseNumber.getText();
-        
-        if(facade.validCourse(department,number)){
+
+        if(facade.validCourse(department, number)){
             course = facade.findCourse(department, number);
             if(course instanceof Course){
                 lbl_courseName.setText(course.getName());
@@ -106,10 +106,13 @@ public class CourseController implements Initializable{
                 lbl_creditHours.setText("Credit Hours: " + course.getCreditHours());
                 lbl_department.setText(course.getDepartment());
                 lbl_description.setText(course.getDescription());
+                lbl_error.setText("");
+                
             }
+            
+        } else {
+            lbl_error.setText("Invalid Course");
         }
-        else{
-        lbl_error.setText("Invalid Course");
-       }
+       
     }
 }

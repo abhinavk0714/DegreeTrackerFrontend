@@ -26,7 +26,11 @@
       <TextField fx:id="txt_courseNumber" layoutX="206.0" layoutY="256.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Course Number" />
       <Button fx:id="searchButton" layoutX="253.0" layoutY="304.0" mnemonicParsing="false" onAction="#courseSearch" text="Search" />
       <Text fill="WHITE" layoutX="292.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2024 Team Salt - University of South Carolina" />
+<<<<<<< HEAD
       <Label fx:id="lbl_error" layoutX="266.0" layoutY="352.0" />
+=======
+      <Label fx:id="lbl_error" layoutX="234.0" layoutY="188.0" />
+>>>>>>> fd79bdbe332804254f7d3b1f3381923cf2f36bf6
       <AnchorPane layoutX="415.0" layoutY="132.0" prefHeight="362.0" prefWidth="370.0">
          <children>
             <Label fx:id="lbl_courseNumber" layoutX="59.0" layoutY="6.0" />

@@ -83,6 +83,7 @@ public class AdvisorController implements Initializable {
         }
     }
 
+    @FXML
     void searchForStudent(ActionEvent event) {
         String searchedStudent = studentSearchText.getText();
         Student tempStudent;
@@ -100,10 +101,10 @@ public class AdvisorController implements Initializable {
                 // Student found, you can handle the student object here
                 System.out.println("Student found: " + tempStudent.toString());
             } else {
-                System.out.println("This is not a valid student");
+                studentSearchMessage.setText("This is not a valid student");
             }
         } else {
-            System.out.println("Please enter both a first and a last name");
+            studentSearchText.setText("Please enter both a first and a last name");
         }
     }
     

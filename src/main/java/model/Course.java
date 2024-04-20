@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 
+
+
 /**
 * This class is the Course class that holds all the relevent information for each course
 * @author Team SALT
@@ -18,6 +20,7 @@ public class Course {
     private ArrayList<Availablity> availablity;
     private HashMap<UUID, String> prerequisite;
     private ArrayList<UUID> corequisite;
+    private CourseList courseList;
     
     public Course(UUID id, String name, String department, String number, String description, long creditHours,
     ArrayList<Availablity> Providedavailability, HashMap<UUID, String> prerequisites, ArrayList<UUID> corequisiteIDs) {
@@ -122,6 +125,18 @@ public class Course {
     
     public void setCorequisite(ArrayList<UUID> corequisite) {
         this.corequisite = corequisite;
+    }
+
+    public ArrayList<String> formatPrerequisites()
+    {
+        ArrayList<String> prerequitistes = new ArrayList<String>();
+        prerequisite.forEach((UUID,String) -> {
+            
+            Course course = courseList.getCourseByID(UUID);
+            prerequitistes.add(course.getDepartment() + " " + course.getNumber() + ", Grade: " + String );
+        });
+       
+        return prerequitistes;
     }
     
 }

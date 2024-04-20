@@ -2,6 +2,7 @@ module salt.frontend {
     requires javafx.controls;
     requires javafx.fxml;
     requires json.simple;
+    requires javafx.graphics;
 
     opens library to javafx.fxml;
     exports library;

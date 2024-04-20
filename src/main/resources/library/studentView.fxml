@@ -63,7 +63,7 @@
             <Text fx:id="completedCoursesText" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="184.21630859375" />
          </content>
       </ScrollPane>
-      <Text layoutX="488.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Semester: 5 (FALL 2024)">
+      <Text layoutX="474.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Semester: 5 (FALL 2024)">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

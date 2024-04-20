@@ -142,7 +142,6 @@ public class EightSemesterPlan {
         }
         stringBuilder.append("Application Area Courses: ").append(applicationArea).append("\n");
         stringBuilder.append("Elective Choices: ").append(electiveChoices).append("\n");
-        //stringBuilder.append("Major Progress: ").append(majorProgress).append("\n");
 
         return stringBuilder.toString();
     }

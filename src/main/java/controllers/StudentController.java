@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -22,124 +23,127 @@ import library.App;
 import model.*;
 
 public class StudentController {
-
+    
     private GradeSystemFACADE facade;
     private UserList userList;
     private CourseList courseList;
     private MajorList majorList;
     private Student student;
-
+    
     @FXML
     private ResourceBundle resources;
-
+    
     @FXML
     private URL location;
-
+    
     @FXML
     private Button LOButton;
-
+    
+    @FXML
+    private ProgressBar degreeProgressBar;
+    
     @FXML
     private Button courseSearchButton;
-
+    
     @FXML
     private TextField courseSearchText;
-
+    
     @FXML
     private Accordion eightSemesterPlan;
-
+    
     @FXML
     private TitledPane semester1;
-
+    
     @FXML
     private AnchorPane semester1courses;
-
+    
     @FXML
     private TitledPane semester2;
-
+    
     @FXML
     private AnchorPane semester2courses;
-
+    
     @FXML
     private TitledPane semester3;
-
+    
     @FXML
     private AnchorPane semester3courses;
-
+    
     @FXML
     private TitledPane semester4;
-
+    
     @FXML
     private AnchorPane semester4courses;
-
+    
     @FXML
     private TitledPane semester5;
-
+    
     @FXML
     private AnchorPane semester5courses;
-
+    
     @FXML
     private TitledPane semester6;
-
+    
     @FXML
     private AnchorPane semester6courses;
-
+    
     @FXML
     private TitledPane semester7;
-
+    
     @FXML
     private AnchorPane semester7courses;
-
+    
     @FXML
     private TitledPane semester8;
-
+    
     @FXML
     private AnchorPane semester8courses;
-
+    
     @FXML
     private TableView<Course> semester1Table;
-
+    
     @FXML
     private TableView<Course> semester2Table;
-
+    
     @FXML
     private TableView<Course> semester3Table;
-
+    
     @FXML
     private TableView<Course> semester4Table;
-
+    
     @FXML
     private TableView<Course> semester5Table;
-
+    
     @FXML
     private TableView<Course> semester6Table;
-
+    
     @FXML
     private TableView<Course> semester7Table;
-
+    
     @FXML
     private TableView<Course> semester8Table;
-
+    
     @FXML
     private Label studentAdvisorLabel;
-
+    
     @FXML
     private Label studentClassificationLabel;
-
+    
     @FXML
     private Label studentFlagsLabel;
-
+    
     @FXML
     private Label studentGPALabel;
-
+    
     @FXML
     private Label studentIDLabel;
-
+    
     @FXML
     private Label studentMajorLabel;
-
+    
     @FXML
     private Label studentNameLabel;
-
+    
     @FXML
     void switchToCourseView(ActionEvent event) {
         try {
@@ -148,7 +152,7 @@ public class StudentController {
             e.printStackTrace();
         }
     }
-
+    
     @FXML
     void switchToLogin(ActionEvent event) {
         try {
@@ -157,11 +161,9 @@ public class StudentController {
             e.printStackTrace();
         }
     }
-
+    
     @FXML
     void initialize() {
-        System.out.println("semester1Table: " + semester1Table);
-        System.out.println("semester2Table: " + semester2Table);
         this.userList = UserList.getInstance();
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
@@ -186,28 +188,30 @@ public class StudentController {
             populateSemesterTable(semester8Table, eightSemesterPlan.getSemesters().get(7));
         }
     }
-
+    
     private void populateSemesterTable(TableView<Course> table, ArrayList<Course> courses) {
-        TableColumn<Course, String> departmentColumn = new TableColumn<>("Department");
-        departmentColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDepartment()));
-
-        TableColumn<Course, String> numberColumn = new TableColumn<>("Number");
-        departmentColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNumber()));
-
-        TableColumn<Course, String> nameColumn = new TableColumn<>("Name");
-        departmentColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getName()));
-
-        TableColumn<Course, Long> creditHoursColumn = new TableColumn<>("Credit Hours");
-        creditHoursColumn.setCellValueFactory(data -> new SimpleLongProperty(data.getValue().getCreditHours()).asObject());
-
-        TableColumn<Course, String> descriptionColumn = new TableColumn<>("Description");
-        departmentColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDescription()));
-
+        System.out.println("Populating table with courses: " + courses);
+        
         if (table.getColumns().isEmpty()) {
+            TableColumn<Course, String> departmentColumn = new TableColumn<>("Department");
+            departmentColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDepartment()));
+            
+            TableColumn<Course, String> numberColumn = new TableColumn<>("Number");
+            numberColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNumber()));
+            
+            TableColumn<Course, String> nameColumn = new TableColumn<>("Name");
+            nameColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getName()));
+            
+            TableColumn<Course, Long> creditHoursColumn = new TableColumn<>("Credit Hours");
+            creditHoursColumn.setCellValueFactory(data -> new SimpleLongProperty(data.getValue().getCreditHours()).asObject());
+            
+            TableColumn<Course, String> descriptionColumn = new TableColumn<>("Description");
+            descriptionColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDescription()));
+            
             table.getColumns().addAll(departmentColumn, numberColumn, nameColumn, creditHoursColumn, descriptionColumn);
         }
         table.getItems().clear();
         table.getItems().addAll(courses);
     }
-
+    
 }

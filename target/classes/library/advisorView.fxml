@@ -45,7 +45,7 @@
       </AnchorPane>
       <AnchorPane layoutX="26.0" layoutY="178.0" prefHeight="335.0" prefWidth="504.0">
          <children>
-            <ImageView fitHeight="117.0" fitWidth="93.0" layoutX="6.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="6.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/student2.jpeg" />
                </image>
@@ -60,7 +60,7 @@
                   <Font name="Times New Roman" size="15.0" />
                </font>
             </Label>
-            <ImageView fitHeight="117.0" fitWidth="103.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="6.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/braxwest.png" />
                </image>
@@ -75,12 +75,12 @@
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Text>
-            <ImageView fitHeight="149.0" fitWidth="159.0" layoutX="233.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="233.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/student3.jpeg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="128.0" fitWidth="159.0" layoutX="233.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="233.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/student4.jpeg" />
                </image>

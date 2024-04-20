@@ -56,11 +56,12 @@ public class GradeSystemFACADE {
      */
     public boolean validCourse(String department, String number){
         Course course = courseList.getCourseByNumber(department, number);
-        if( course.getDepartment().equals(department) || course.getNumber().equals(number)){
-        return true;
+        if(course == null){
+            return false;
         }
-        else{
-            System.out.println("Invalid Course");
+        if(course.getDepartment().equals(department) && course.getNumber().equals(number)){
+            return true;
+        } else {
             return false;
         }
         

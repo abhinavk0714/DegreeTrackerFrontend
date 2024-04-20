@@ -11,7 +11,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import library.App;
 import model.*;
 
@@ -31,9 +34,15 @@ public class AdvisorController implements Initializable {
     
     @FXML
     private TextField studentSearchText;
+
+    @FXML
+    private Text studentSearchMessage;
     
     @FXML
     private Label welcomeUserLabel;
+
+    @FXML
+    private ImageView braxWestImage;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -54,6 +63,7 @@ public class AdvisorController implements Initializable {
         }
     }
 
+    // For the student search button
     @FXML
     void switchToStudentView(ActionEvent event) {
         try {
@@ -63,17 +73,26 @@ public class AdvisorController implements Initializable {
         }
     }
 
+    // For clicking on the image
     @FXML
-    void searchForStudent(ActionEvent event){
-        String searchedStudent = studentSearchText.getText();
-        Student tempStudent;
-        
-        if(facade.findStudent(searchedStudent) != null){
-            
-        } else {
-            System.out.println("This is not a valid student");
+    void switchToStudentViewFromImage(MouseEvent event) {
+        try {
+            App.setRoot("studentView");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
+
+    @FXML
+    void searchForStudent(ActionEvent event){
+        String searchedStudent = studentSearchText.getText();        
+        if(facade.findStudent(searchedStudent) != null){
+            switchToStudentView(event);
+        } else {
+            studentSearchMessage.setText("This is not a valid student");
+        }
+    }
+
 
 }
 

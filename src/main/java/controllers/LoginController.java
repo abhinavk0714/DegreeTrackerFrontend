@@ -21,6 +21,7 @@ public class LoginController implements Initializable {
     private User currentUser;
     private CourseList courseList;
     private MajorList majorList;
+    public static String username;
     
     @FXML
     private TextField txt_username;
@@ -78,7 +79,7 @@ public class LoginController implements Initializable {
     
     @FXML
     void studentLogin(ActionEvent event) {
-        String username = txt_username.getText();
+        username = txt_username.getText();
         String password = txt_password.getText();
         
         if(facade.login(username, password)) {
@@ -108,6 +109,11 @@ public class LoginController implements Initializable {
         } else {
             message.setText("Invalid login credentials");
         }
+    }
+
+    public static String getUsername()
+    {
+        return username;
     }
     
 }

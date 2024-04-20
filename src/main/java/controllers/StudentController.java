@@ -92,8 +92,7 @@ public class StudentController {
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
-        String username = LoginController.getUsername();
-        this.student = facade.findStudent(username);
+        this.student = facade.findStudent("BWest");
         studentAdvisorLabel.setText("Advisor: " + student.getAdvisor().getFirstName() + " " + student.getAdvisor().getLastName());
         studentClassificationLabel.setText("Classification: " + student.getClassification());
         studentFlagsLabel.setText("Flags: " + student.getFlag());

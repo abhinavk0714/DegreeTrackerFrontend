@@ -45,9 +45,12 @@ public class Course {
 
     @Override
     public String toString() {
+        return department + " " + number + " " + name + " | Credit Hours: " + creditHours;
+    }
+
+    public String smallCourseView() {
         return department + " " + number;
     }
-    
     
     
     // Getters

@@ -1,1 +1,28 @@
-[{"password":"12345678","firstname":"Osbert","id":"d6939162-ca59-4c24-9bfa-d499f2eb9a89","studentIDs":["088079fa-f935-42ad-8de1-c479c7dc40ad"],"username":"OOdenn","lastname":"Odden"},{"password":"cd","firstname":"soliman","id":"86802a2c-de69-43a9-839c-6e86c48e994c","studentIDs":[],"username":"ab","lastname":"123456"},{"password":"123456","firstname":"tan","id":"4b39ad20-e205-4658-b5dd-90156f755973","studentIDs":[],"username":"tguy","lastname":"guy"}]
+[
+    {
+        "password": "12345678",
+        "firstname": "Osbert",
+        "id": "d6939162-ca59-4c24-9bfa-d499f2eb9a89",
+        "studentIDs": [
+            "088079fa-f935-42ad-8de1-c479c7dc40ad"
+        ],
+        "username": "OOdenn",
+        "lastname": "Odden"
+    },
+    {
+        "password": "cd",
+        "firstname": "soliman",
+        "id": "86802a2c-de69-43a9-839c-6e86c48e994c",
+        "studentIDs": [],
+        "username": "ab",
+        "lastname": "123456"
+    },
+    {
+        "password": "123456",
+        "firstname": "tan",
+        "id": "4b39ad20-e205-4658-b5dd-90156f755973",
+        "studentIDs": [],
+        "username": "tguy",
+        "lastname": "guy"
+    }
+]

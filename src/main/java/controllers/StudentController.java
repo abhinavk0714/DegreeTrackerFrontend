@@ -99,7 +99,7 @@ public class StudentController {
         studentGPALabel.setText("GPA: " + student.getOverallGPA());
         studentIDLabel.setText("ID: " + student.getUUID());
         studentMajorLabel.setText("Major: Computer Science");
-        studentNameLabel.setText("Name: " + facade.getUser().getFirstName() + " " + facade.getUser().getLastName());
+        studentNameLabel.setText("Name: " + student.getFirstName() + " " + student.getLastName());
         
         displayEightSemesterPlan();
         displayCompletedCourses();

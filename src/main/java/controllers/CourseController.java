@@ -88,7 +88,7 @@ public class CourseController implements Initializable{
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
-        error.setText(" ");
+        error.setText("Enter Course Details");
     }
     @FXML
     void courseSearch(ActionEvent event) {

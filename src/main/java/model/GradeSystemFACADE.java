@@ -207,7 +207,7 @@ public class GradeSystemFACADE {
             Map.Entry pair = (Map.Entry)it.next();
             UUID id = (UUID) pair.getKey();
             Course course = courseList.getCourseByID(id);
-            String value = course.getDepartment() + " " + course.getNumber() + ", Grade: " + pair.getValue() + "\n";
+            String value = pair.getValue() + " or better in " + course.getDepartment() + " " + course.getNumber();
             prerequitistes.add(value);
             it.remove(); 
         }

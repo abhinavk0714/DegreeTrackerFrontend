@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="575.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CourseController">
@@ -26,7 +27,7 @@
       <TextField fx:id="txt_courseNumber" layoutX="206.0" layoutY="256.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Course Number" />
       <Button fx:id="searchButton" layoutX="253.0" layoutY="304.0" mnemonicParsing="false" onAction="#courseSearch" text="Search" />
       <Text fill="WHITE" layoutX="292.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2024 Team Salt - University of South Carolina" />
-      <Label fx:id="lbl_error" layoutX="234.0" layoutY="188.0" />
+      <Label fx:id="lbl_error" layoutX="234.0" layoutY="188.0" prefHeight="18.0" prefWidth="89.0" textAlignment="CENTER" />
       <AnchorPane layoutX="415.0" layoutY="132.0" prefHeight="362.0" prefWidth="370.0">
          <children>
             <Label fx:id="lbl_courseNumber" layoutX="59.0" layoutY="6.0" />
@@ -39,5 +40,10 @@
             <Label fx:id="lbl_availability" layoutX="9.0" layoutY="165.0" prefHeight="26.0" prefWidth="320.0" />
          </children>
       </AnchorPane>
+      <Text layoutX="167.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Search" textAlignment="CENTER" wrappingWidth="235.77853393554688">
+         <font>
+            <Font name="Times New Roman" size="22.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

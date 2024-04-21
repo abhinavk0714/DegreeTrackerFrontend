@@ -198,6 +198,7 @@ public class GradeSystemFACADE {
         //userList.saveAdvisors();
     }
 
+    //created a method to format the prerequisistes to show as course department and number instead of UUID
     public ArrayList<String> formatPrerequisites(HashMap<UUID,String> pre)
     {
         ArrayList<String> prerequitistes = new ArrayList<String>();
@@ -212,6 +213,25 @@ public class GradeSystemFACADE {
         }
         return prerequitistes;
     }
+
+    //created a method to format the corequisistes to show as course department and number instead of UUID
+    public ArrayList<String> formatCorequisites(ArrayList<UUID> ids)
+    {
+
+        ArrayList<String> Corequitistes = new ArrayList<String>();
+        if (ids != null)
+        {
+        for (int i = 0; i< ids.size(); i++)
+        {
+            UUID id = ids.get(i);
+            Course course = courseList.getCourseByID(id);
+            Corequitistes.add(course.getDepartment() + " " + course.getNumber() + " \n");
+        } }
+        return Corequitistes;
+    }
+
+
+
 
     public static void main(String[] args) {
         UserList userList = UserList.getInstance();

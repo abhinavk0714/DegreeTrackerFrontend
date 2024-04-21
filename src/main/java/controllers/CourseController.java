@@ -102,7 +102,7 @@ public class CourseController implements Initializable{
                 lbl_courseNumber.setText(course.getNumber());
                 lbl_availability.setText("Availability: " + course.getAvailablity());
                 lbl_prereq.setText("Prerequesites: " + facade.formatPrerequisites(course.getPrerequisite()));
-                lbl_coreq.setText("Corequesites: " + course.getCorequisite());
+                lbl_coreq.setText("Corequesites: " + facade.formatCorequisites(course.getCorequisite()));
                 lbl_creditHours.setText("Credit Hours: " + course.getCreditHours());
                 lbl_department.setText(course.getDepartment());
                 lbl_description.setText(course.getDescription());

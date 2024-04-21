@@ -88,7 +88,7 @@ public class CourseController implements Initializable{
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
-        lbl_error.setText(" ");
+        error.setText(" ");
     }
     @FXML
     void courseSearch(ActionEvent event) {
@@ -106,19 +106,12 @@ public class CourseController implements Initializable{
                 lbl_creditHours.setText("Credit Hours: " + course.getCreditHours());
                 lbl_department.setText(course.getDepartment());
                 lbl_description.setText(course.getDescription());
-                lbl_error.setText("");
+                error.setText("");
                 
             }
             
         } else {
-            lbl_error.setText("Invalid Course");
+            error.setText("Invalid Course");
         }
-<<<<<<< HEAD
-        else{
-        error.setText("Invalid Course");
-       }
-=======
-       
->>>>>>> 519e92df17612f3fe99dba2f718fe35939f55443
     }
 }

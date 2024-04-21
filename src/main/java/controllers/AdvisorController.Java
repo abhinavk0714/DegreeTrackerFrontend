@@ -52,7 +52,6 @@ public class AdvisorController implements Initializable {
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
         
         welcomeUserLabel.setText("Welcome, " + facade.getUser().getFirstName() + " " + facade.getUser().getLastName() + "!");
-        studentSearchMessage.setText("Student Search");
     }
     
     @FXML

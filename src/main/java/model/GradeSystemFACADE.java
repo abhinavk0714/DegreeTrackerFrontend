@@ -194,8 +194,11 @@ public class GradeSystemFACADE {
     // added a create new advisor method
     public boolean newAdvisorUser(String fn,String ln, String userName, String password)
     {
-        return userList.addAdvisor(new Advisor(UUID.randomUUID(), fn, ln, userName, password, null));
-        //userList.saveAdvisors();
+        if(userList.addAdvisor(new Advisor(UUID.randomUUID(), userName, password, fn, ln, null))){
+            userList.saveAdvisors();
+            return true;
+        }
+        return false;
     }
 
     //created a method to format the prerequisistes to show as course department and number instead of UUID

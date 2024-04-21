@@ -42,8 +42,10 @@ public class DataWriter extends DataConstants {
 
         //Creating the studentIDs JSON array
         JSONArray studentIDs = new JSONArray();
-        for (UUID studentId : advisor.getStudents()) { 
-            studentIDs.add(studentId.toString());
+        if (advisor.getStudents() != null) {
+            for (UUID studentId : advisor.getStudents()) { 
+                studentIDs.add(studentId.toString());
+            }
         }
         jsonAdvisor.put(ADVISOR_STUDENT_IDS, studentIDs);
 

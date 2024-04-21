@@ -39,7 +39,7 @@ public class CourseController implements Initializable{
     private Button backButton;
 
     @FXML
-    private Label lbl_error;
+    private Label error;
 
     @FXML
     private TableView<Course> courseTable;
@@ -113,6 +113,12 @@ public class CourseController implements Initializable{
         } else {
             lbl_error.setText("Invalid Course");
         }
+<<<<<<< HEAD
+        else{
+        error.setText("Invalid Course");
+       }
+=======
        
+>>>>>>> 519e92df17612f3fe99dba2f718fe35939f55443
     }
 }

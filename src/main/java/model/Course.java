@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 
+
+
 /**
 * This class is the Course class that holds all the relevent information for each course
 * @author Team SALT
@@ -45,9 +47,12 @@ public class Course {
 
     @Override
     public String toString() {
+        return department + " " + number + " " + name + " | Credit Hours: " + creditHours;
+    }
+
+    public String smallCourseView() {
         return department + " " + number;
     }
-    
     
     
     // Getters
@@ -120,5 +125,6 @@ public class Course {
     public void setCorequisite(ArrayList<UUID> corequisite) {
         this.corequisite = corequisite;
     }
+
     
 }

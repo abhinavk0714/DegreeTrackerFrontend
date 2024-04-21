@@ -2,6 +2,9 @@ package model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.UUID;
 
 public class GradeSystemFACADE {
@@ -48,6 +51,8 @@ public class GradeSystemFACADE {
     public Course findCourse(String department, String number) {
         return courseList.getCourseByNumber(department, number);
     }
+
+    
     /**
      * This method is to check if the user's entered course for course search is valid
      * @param department the user's entered department
@@ -56,11 +61,12 @@ public class GradeSystemFACADE {
      */
     public boolean validCourse(String department, String number){
         Course course = courseList.getCourseByNumber(department, number);
-        if( course.getDepartment().equals(department) || course.getNumber().equals(number)){
-        return true;
+        if(course == null){
+            return false;
         }
-        else{
-            System.out.println("Invalid Course");
+        if(course.getDepartment().equals(department) && course.getNumber().equals(number)){
+            return true;
+        } else {
             return false;
         }
         
@@ -133,6 +139,9 @@ public class GradeSystemFACADE {
         return UserList.getInstance().findStudentById(studentID);
     }
     
+    public Student findStudentbyName(String firstname, String lastname) {
+        return UserList.getInstance().findStudentByName(firstname, lastname);
+    }
     // use view student details with the student being tawnie hill instead of brax west
     
     public EightSemesterPlan viewStudentsEightSemesterPlan(Student student) {
@@ -187,6 +196,21 @@ public class GradeSystemFACADE {
     {
         return userList.addAdvisor(new Advisor(UUID.randomUUID(), fn, ln, userName, password, null));
         //userList.saveAdvisors();
+    }
+
+    public ArrayList<String> formatPrerequisites(HashMap<UUID,String> pre)
+    {
+        ArrayList<String> prerequitistes = new ArrayList<String>();
+        Iterator<Entry<UUID, String>> it = pre.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            UUID id = (UUID) pair.getKey();
+            Course course = courseList.getCourseByID(id);
+            String value = course.getDepartment() + " " + course.getNumber() + ", Grade: " + pair.getValue() + "\n";
+            prerequitistes.add(value);
+            it.remove(); 
+        }
+        return prerequitistes;
     }
 
     public static void main(String[] args) {

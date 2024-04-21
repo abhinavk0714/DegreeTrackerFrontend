@@ -14,8 +14,7 @@
       <TextField fx:id="txt_lastname" layoutX="638.0" layoutY="336.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Last Name" />
       <TextField fx:id="txt_username" layoutX="638.0" layoutY="373.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Username" />
       <TextField fx:id="txt_password" layoutX="638.0" layoutY="413.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="158.0" promptText="Enter Password" />
-      <Button fx:id="studentButton" layoutX="623.0" layoutY="455.0" onAction="#studentRegister" prefHeight="77.0" prefWidth="77.0" text="Student Register" textAlignment="CENTER" wrapText="true" />
-      <Button fx:id="advisorButton" layoutX="735.0" layoutY="455.0" onAction="#advisorRegister" prefHeight="77.0" prefWidth="77.0" text="Advisor Resigter" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="advisorButton" layoutX="678.0" layoutY="456.0" onAction="#advisorRegister" prefHeight="77.0" prefWidth="77.0" text="Advisor Resigter" textAlignment="CENTER" wrapText="true" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#74000b" height="70.0" stroke="BLACK" strokeType="INSIDE" width="938.0" />
       <ImageView fitHeight="70.0" fitWidth="104.0" layoutX="868.0" pickOnBounds="true" preserveRatio="true">
          <image>

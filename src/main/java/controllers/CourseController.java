@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.fxml.Initializable;
 import library.App;
 import model.CourseList;
@@ -87,27 +88,37 @@ public class CourseController implements Initializable{
         this.courseList = CourseList.getInstance();
         this.majorList = MajorList.getInstance();
         this.facade = GradeSystemFACADE.getFacadeInstance(userList, courseList, majorList);
+        lbl_error.setText(" ");
     }
     @FXML
     void courseSearch(ActionEvent event) {
         String department = txt_department.getText();
         String number = txt_courseNumber.getText();
-        
-        if(facade.validCourse(department,number)){
+
+        if(facade.validCourse(department, number)){
             course = facade.findCourse(department, number);
             if(course instanceof Course){
                 lbl_courseName.setText(course.getName());
                 lbl_courseNumber.setText(course.getNumber());
                 lbl_availability.setText("Availability: " + course.getAvailablity());
-                lbl_prereq.setText("Prerequesites: " + course.getPrerequisite());
+                lbl_prereq.setText("Prerequesites: " + facade.formatPrerequisites(course.getPrerequisite()));
                 lbl_coreq.setText("Corequesites: " + course.getCorequisite());
                 lbl_creditHours.setText("Credit Hours: " + course.getCreditHours());
                 lbl_department.setText(course.getDepartment());
                 lbl_description.setText(course.getDescription());
+                lbl_error.setText("");
+                
             }
+            
+        } else {
+            lbl_error.setText("Invalid Course");
         }
+<<<<<<< HEAD
         else{
         error.setText("Invalid Course");
        }
+=======
+       
+>>>>>>> 519e92df17612f3fe99dba2f718fe35939f55443
     }
 }

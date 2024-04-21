@@ -46,12 +46,12 @@ public class CourseList {
 
     
     public Course getCourseByID(UUID id) {
-        for (Course course : listOfCourses.values()) {
-            if (course.getId() == id) {
-                return course;
-            }
-        }
-        return null;
+
+        Course course = listOfCourses.get(id);
+        if (course == null)
+            return null;
+        else
+            return course;
     }
 
     public HashMap<UUID, Course> getAllCourses() {

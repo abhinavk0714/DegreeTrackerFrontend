@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.UUID;
 
 public class GradeSystemFACADE {
@@ -200,11 +201,13 @@ public class GradeSystemFACADE {
     public ArrayList<String> formatPrerequisites(HashMap<UUID,String> pre)
     {
         ArrayList<String> prerequitistes = new ArrayList<String>();
-        Iterator it = pre.entrySet().iterator();
+        Iterator<Entry<UUID, String>> it = pre.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry)it.next();
-            Course course = courseList.getCourseByID((UUID) pair.getKey());
-            prerequitistes.add(course.getDepartment() + " " + course.getNumber() + ", Grade: " + pair.getValue());
+            UUID id = (UUID) pair.getKey();
+            Course course = courseList.getCourseByID(id);
+            String value = course.getDepartment() + " " + course.getNumber() + ", Grade: " + pair.getValue() + "\n";
+            prerequitistes.add(value);
             it.remove(); 
         }
         return prerequitistes;
